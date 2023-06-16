@@ -5,6 +5,7 @@
 package vistas;
 
 import metodosnumericos.Conversiones;
+import metodosnumericos.Errores;
 
 /**
  *
@@ -16,9 +17,11 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     Conversiones Conver = new Conversiones();
+    Errores Erro = new Errores();
     public Main() {
         initComponents();
-        Limpiar();
+        LimpiarConver();
+        LimpiarErr();
         
     }
 
@@ -34,7 +37,8 @@ public class Main extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        CONVERSIONES = new javax.swing.JTabbedPane();
+        Unidades = new javax.swing.JTabbedPane();
+        Unidad1 = new javax.swing.JTabbedPane();
         PanConver = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         cajaTxtConver = new javax.swing.JTextField();
@@ -64,9 +68,13 @@ public class Main extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        txtResEa = new javax.swing.JLabel();
+        txtResEr = new javax.swing.JLabel();
+        btLimErr = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
+        Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -222,7 +230,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -245,7 +253,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
-        CONVERSIONES.addTab("CONVERSIONES", PanConver);
+        Unidad1.addTab("CONVERSIONES", PanConver);
 
         PanErrores.setBackground(new java.awt.Color(153, 255, 153));
 
@@ -262,6 +270,11 @@ public class Main extends javax.swing.JFrame {
         btErrAbs.setBackground(new java.awt.Color(153, 255, 204));
         btErrAbs.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btErrAbs.setText("ERROR ABSOLUTO");
+        btErrAbs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btErrAbsActionPerformed(evt);
+            }
+        });
 
         btErrRe.setBackground(new java.awt.Color(153, 255, 204));
         btErrRe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -281,6 +294,21 @@ public class Main extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("ERROR RELATIVO:");
+
+        txtResEa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtResEa.setText("--");
+
+        txtResEr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtResEr.setText("--");
+
+        btLimErr.setBackground(new java.awt.Color(153, 255, 204));
+        btLimErr.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btLimErr.setText("LIMPIAR");
+        btLimErr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimErrActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanErroresLayout = new javax.swing.GroupLayout(PanErrores);
         PanErrores.setLayout(PanErroresLayout);
@@ -314,9 +342,17 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(132, 132, 132)
                         .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(207, Short.MAX_VALUE))
+                            .addGroup(PanErroresLayout.createSequentialGroup()
+                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtResEa, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PanErroresLayout.createSequentialGroup()
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btLimErr, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtResEr, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanErroresLayout.setVerticalGroup(
             PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,62 +374,90 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PanErroresLayout.createSequentialGroup()
+                        .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(9, 9, 9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtResEr, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(btLimErr, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        CONVERSIONES.addTab("ERRORES", PanErrores);
+        Unidad1.addTab("ERRORES", PanErrores);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 711, Short.MAX_VALUE)
+            .addGap(0, 697, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        CONVERSIONES.addTab("tab3", jPanel5);
+        Unidad1.addTab("tab3", jPanel5);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 711, Short.MAX_VALUE)
+            .addGap(0, 697, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        CONVERSIONES.addTab("tab4", jPanel6);
+        Unidad1.addTab("tab4", jPanel6);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 711, Short.MAX_VALUE)
+            .addGap(0, 697, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        CONVERSIONES.addTab("tab5", jPanel7);
+        Unidad1.addTab("tab5", jPanel7);
+
+        Unidades.addTab("UNIDAD 1", Unidad1);
+
+        javax.swing.GroupLayout Unidad2Layout = new javax.swing.GroupLayout(Unidad2);
+        Unidad2.setLayout(Unidad2Layout);
+        Unidad2Layout.setHorizontalGroup(
+            Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 697, Short.MAX_VALUE)
+        );
+        Unidad2Layout.setVerticalGroup(
+            Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 536, Short.MAX_VALUE)
+        );
+
+        Unidades.addTab("UNIIDAD 2", Unidad2);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(CONVERSIONES, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(CONVERSIONES)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -401,12 +465,11 @@ public class Main extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
+                        .addGap(131, 131, 131)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -414,7 +477,7 @@ public class Main extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(45, 45, 45)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -424,7 +487,7 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -445,7 +508,7 @@ public class Main extends javax.swing.JFrame {
 
     private void BTlimpiarBinAdecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTlimpiarBinAdecActionPerformed
         // TODO add your handling code here:
-        Limpiar();
+        LimpiarConver();
     }//GEN-LAST:event_BTlimpiarBinAdecActionPerformed
 
     private void BTcalDecAbinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTcalDecAbinActionPerformed
@@ -482,7 +545,27 @@ public class Main extends javax.swing.JFrame {
 
     private void btErrReActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btErrReActionPerformed
         // TODO add your handling code here:
+         double err1=0, err2 = 0,Ea=0;
+        err2 = Double.parseDouble(cajaTxtErrN2.getText());
+        err1 = Double.parseDouble(cajaTxtErrN1.getText());
+        Ea = Erro.errAbs(err1, err2);
+        txtResEr.setText(String.valueOf( Erro.errRel(Ea, err2)));
     }//GEN-LAST:event_btErrReActionPerformed
+
+    private void btErrAbsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btErrAbsActionPerformed
+        // TODO add your handling code here:
+        double err1=0,err2 = 0;
+        err1 = Double.parseDouble(cajaTxtErrN1.getText());
+        err2 = Double.parseDouble(cajaTxtErrN2.getText());
+        
+        txtResEa.setText(String.valueOf(Erro.errAbs(err1, err2)));
+        
+    }//GEN-LAST:event_btErrAbsActionPerformed
+
+    private void btLimErrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimErrActionPerformed
+        // TODO add your handling code here:
+        LimpiarErr();
+    }//GEN-LAST:event_btLimErrActionPerformed
 
     /**
      * @param args the command line arguments
@@ -525,11 +608,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton BTcalHexaAdeci;
     private javax.swing.JButton BTcalOcAdeci;
     private javax.swing.JButton BTlimpiarBinAdec;
-    private javax.swing.JTabbedPane CONVERSIONES;
     private javax.swing.JPanel PanConver;
     private javax.swing.JPanel PanErrores;
+    private javax.swing.JTabbedPane Unidad1;
+    private javax.swing.JPanel Unidad2;
+    private javax.swing.JTabbedPane Unidades;
     private javax.swing.JButton btErrAbs;
     private javax.swing.JButton btErrRe;
+    private javax.swing.JButton btLimErr;
     private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
@@ -556,14 +642,23 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel labelTxtDecAbin;
     private javax.swing.JLabel labelTxtHexaAdeci;
     private javax.swing.JLabel labelTxtOcAdec;
+    private javax.swing.JLabel txtResEa;
+    private javax.swing.JLabel txtResEr;
     // End of variables declaration//GEN-END:variables
 
-    private void Limpiar() {
+    private void LimpiarConver() {
         cajaTxtConver.setText("");
         labelTxtBinAdec.setText("--");
         labelTxtDecAbin.setText("--");
         labelTxtOcAdec.setText("--");
         labelTxtHexaAdeci.setText("--");
         
+        
+    }
+    private void LimpiarErr(){
+        txtResEa.setText("--");
+        txtResEr.setText("--");
+        cajaTxtErrN1.setText("");
+        cajaTxtErrN2.setText("");
     }
 }

@@ -10,4 +10,16 @@ package metodosnumericos;
  */
 public class Errores {
     
+    public double errAbs(double err1, double err2){
+        double Ea;
+        Ea = err2-err1;
+        return Ea;
+    }
+    
+    public double errRel(double Ea, double err2){
+        double Er;
+        Er = Ea/err2;
+        return Er;
+    }
+    
 }
