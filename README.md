@@ -1,4 +1,4 @@
-# Proyecto de Métodos Numéricos
+# Proyecto de Métodos Numéricos :clap:
 
 Este proyecto tiene como objetivo recopilar ejercicios y temas relacionados con la materia de Métodos Numéricos, aprendidos a lo largo del semestre. Proporciona una calculadora de conversiones numéricas y está desarrollado en Java.
 
@@ -29,4 +29,3 @@ Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte 
 
 - Nombre: [Nombre de la coordinadora]
 - Correo electrónico: jjcenteno@uce.edu.ec
-:star:
