@@ -12,8 +12,6 @@ Este proyecto tiene como objetivo recopilar ejercicios y temas relacionados con 
 - Sistema operativo compatible (Windows, macOS, Linux)
 
 ## Uso
-![Conversiones/decimal](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
-
 1. Descarga el archivo ejecutable `metodos_numericos.jar` desde [enlace_del_repositorio].
 2. Abre una terminal o línea de comandos.
 3. Navega hasta la ubicación donde se encuentra el archivo `metodos_numericos.jar`.
@@ -30,3 +28,6 @@ Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte 
 
 - Nombre: [Nombre de la coordinadora]
 - Correo electrónico: jjcenteno@uce.edu.ec
+
+## **Interfaces**
+![Interfaz de **Conversiones**](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
