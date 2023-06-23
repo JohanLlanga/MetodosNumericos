@@ -1,4 +1,4 @@
-# Proyecto de Métodos Numéricos :clap:
+# *Proyecto de Métodos Numéricos* :clap:
 
 Este proyecto tiene como objetivo recopilar ejercicios y temas relacionados con la materia de Métodos Numéricos, aprendidos a lo largo del semestre. Proporciona una calculadora de conversiones numéricas y está desarrollado en Java.
 
@@ -12,6 +12,7 @@ Este proyecto tiene como objetivo recopilar ejercicios y temas relacionados con 
 - Sistema operativo compatible (Windows, macOS, Linux)
 
 ## Uso
+![Conversiones/decimal](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
 
 1. Descarga el archivo ejecutable `metodos_numericos.jar` desde [enlace_del_repositorio].
 2. Abre una terminal o línea de comandos.
