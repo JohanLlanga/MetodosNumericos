@@ -29,3 +29,4 @@ Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte 
 
 - Nombre: [Nombre de la coordinadora]
 - Correo electrónico: jjcenteno@uce.edu.ec
+:star:
