@@ -34,7 +34,7 @@ Interfaz de **Conversiones**
 
 ![//](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
 
-  <h1 style="text-align: center;">Interfaz de **Errores**</h1>
+  <h1>Interfaz de **Errores**</h1>
 
   
 
