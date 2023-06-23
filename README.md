@@ -30,14 +30,13 @@ Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte 
 - Correo electrónico: jjcenteno@uce.edu.ec
 
 ## **Interfaces**
-Interfaz de **Conversiones**
+<h3 align="center"> Interfaz de Conversiones </h3>
 
 ![//](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
 
-# <center>Interfaz de **Errores**</center>
+<h3 align="center"> Interfaz de Errores </h3>
 
   
-
 ![Errores](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/e96f3fe7-44f7-4f7e-9326-0dee1f556d0c)
 
 Interfaz de **Propagacion de errores**
