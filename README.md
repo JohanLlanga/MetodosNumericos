@@ -33,9 +33,9 @@ Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte 
 Interfaz de **Conversiones**
 
 ![//](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
-<center>
-  <h1>Interfaz de **Errores**</h1>
-</center>
+
+  <h1 style="text-align: center;">Interfaz de **Errores**</h1>
+
   
 
 ![Errores](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/e96f3fe7-44f7-4f7e-9326-0dee1f556d0c)
