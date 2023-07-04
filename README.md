@@ -50,7 +50,7 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
 
 <h3 align="center"> Interfaz de Propagacion de Errores </h3>
 
-## *Codigo*
+### *Codigo*
 
 ## ![Gif2](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/ce9b440f-2925-43a5-95f0-1f18774515f1)
 
