@@ -30,7 +30,7 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
   
 | Conversiones | Errores  | Propagacion de Errores |Punto Flotante |
 | :------------ |:---------------:|-------:|-------:|
-| Binario a Decimal| Error Absoluto | Signo |Iteraccion|
+| Binario a Decimal| Error Absoluto | Signo  |Iteraccion|
 | Octal a Decimal| Error Relativo | Mantiza |Valor|
 | Decimal a Binario|  | Exponente |Grafica interaccion|
 | Hexadecimal a Binario|   |Valor decimal||
