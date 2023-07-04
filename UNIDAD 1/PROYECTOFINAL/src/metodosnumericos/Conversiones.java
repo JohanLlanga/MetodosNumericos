@@ -6,7 +6,7 @@ package metodosnumericos;
 
 /**
  *
- * @author johan
+ * @author pablo
  */
 public class Conversiones {
     

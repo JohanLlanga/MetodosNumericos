@@ -6,7 +6,7 @@ package metodosnumericos;
 
 /**
  *
- * @author johan
+ * @author wsvargas
  */
 public class PuntoFlotante {
 

@@ -4,9 +4,14 @@
  */
 package vistas;
 
+import javax.swing.table.DefaultTableModel;
 import metodosnumericos.Conversiones;
 import metodosnumericos.Errores;
 import metodosnumericos.PuntoFlotante;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 /**
  *
@@ -17,6 +22,7 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    DefaultTableModel modelo;
     Conversiones Conver = new Conversiones();
     Errores Erro = new Errores();
     PuntoFlotante PuntoF = new PuntoFlotante();
@@ -104,6 +110,7 @@ public class Main extends javax.swing.JFrame {
         cajaTxtNumIterPro = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableProErro = new javax.swing.JTable();
+        btCalcularProErro = new javax.swing.JButton();
         Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JPanel();
@@ -616,6 +623,13 @@ public class Main extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableProErro);
 
+        btCalcularProErro.setText("CALCULAR");
+        btCalcularProErro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCalcularProErroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PropaErroresLayout = new javax.swing.GroupLayout(PropaErrores);
         PropaErrores.setLayout(PropaErroresLayout);
         PropaErroresLayout.setHorizontalGroup(
@@ -636,7 +650,10 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PropaErroresLayout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         PropaErroresLayout.setVerticalGroup(
@@ -654,7 +671,9 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("PROPAGACION ERRORES", PropaErrores);
@@ -890,6 +909,15 @@ public class Main extends javax.swing.JFrame {
         LimpiarPuntoFlotante();
     }//GEN-LAST:event_btLimPuntoFloatActionPerformed
 
+    private void btCalcularProErroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCalcularProErroActionPerformed
+        // TODO add your handling code here:
+        String valXproErro = cajaTxtValorX.getText();
+        BigDecimal valBigPro = new BigDecimal(valXproErro);
+        int IterProErro = Integer.parseInt(cajaTxtNumIterPro.getText());
+        
+        
+    }//GEN-LAST:event_btCalcularProErroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -940,6 +968,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTabbedPane Unidad1;
     private javax.swing.JPanel Unidad2;
     private javax.swing.JTabbedPane Unidades;
+    private javax.swing.JButton btCalcularProErro;
     private javax.swing.JButton btErrAbs;
     private javax.swing.JButton btErrRe;
     private javax.swing.JButton btLimErr;
