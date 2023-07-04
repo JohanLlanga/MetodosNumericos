@@ -19,7 +19,7 @@ import org.jfree.data.xy.XYDataset;
  * @author wsvargas
  */
 public class proErrores {
-    private static XYDataset createDataset(BigDecimal x, int iterations) {
+    public XYDataset createDataset(BigDecimal x, int iterations) {
         DefaultXYDataset dataset = new DefaultXYDataset();
         double[][] data = new double[2][iterations];
 
@@ -37,7 +37,7 @@ public class proErrores {
         return dataset;
     }
 
-    private static BigDecimal exp(BigDecimal x, int iterations) {
+    public BigDecimal exp(BigDecimal x, int iterations) {
         BigDecimal result = BigDecimal.ONE;
         BigDecimal term = BigDecimal.ONE;
         int scale = 128;
@@ -50,7 +50,7 @@ public class proErrores {
         return result;
     }
 
-    private static JFreeChart createChart(XYDataset dataset) {
+    public JFreeChart createChart(XYDataset dataset) {
         JFreeChart chart = ChartFactory.createXYLineChart(
                 "Gráfico de Iteraciones",
                 "Iteración",

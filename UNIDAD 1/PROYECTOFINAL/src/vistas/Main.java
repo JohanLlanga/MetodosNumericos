@@ -12,6 +12,10 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import metodosnumericos.proErrores;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.xy.XYDataset;
 
 /**
  *
@@ -26,6 +30,7 @@ public class Main extends javax.swing.JFrame {
     Conversiones Conver = new Conversiones();
     Errores Erro = new Errores();
     PuntoFlotante PuntoF = new PuntoFlotante();
+    proErrores proErro = new proErrores();
 
     public Main() {
         initComponents();
@@ -915,7 +920,12 @@ public class Main extends javax.swing.JFrame {
         BigDecimal valBigPro = new BigDecimal(valXproErro);
         int IterProErro = Integer.parseInt(cajaTxtNumIterPro.getText());
         
+        XYDataset data = proErro.createDataset(valBigPro, IterProErro);
+        JFreeChart chart = proErro.createChart(data);
         
+        ChartFrame frame = new ChartFrame("Gráfico de Iteraciones", chart);
+        frame.pack();
+        frame.setVisible(true);
     }//GEN-LAST:event_btCalcularProErroActionPerformed
 
     /**
