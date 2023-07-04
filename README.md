@@ -98,7 +98,9 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
     private javax.swing.JLabel labelTxtDecAbin;
     private javax.swing.JLabel labelTxtHexaAdeci;
     private javax.swing.JLabel labelTxtOcAdec;
-    // End of variables declaration                   
+    // End of variables declaration    
+    
+<h4 align="center"> Metodo de Limbiar </h4>
 
     private void Limpiar() {
         cajaTxtConver.setText("");
