@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import javax.swing.JOptionPane;
 import metodosnumericos.proErrores;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -110,12 +111,13 @@ public class Main extends javax.swing.JFrame {
         PropaErrores = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        cajaTxtValorX = new javax.swing.JTextField();
+        cajaTxtValorProX = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         cajaTxtNumIterPro = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableProErro = new javax.swing.JTable();
         btCalcularProErro = new javax.swing.JButton();
+        btLimpiarProErro = new javax.swing.JButton();
         Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JPanel();
@@ -632,6 +634,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btLimpiarProErro.setText("LIMPIAR");
+        btLimpiarProErro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimpiarProErroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PropaErroresLayout = new javax.swing.GroupLayout(PropaErrores);
         PropaErrores.setLayout(PropaErroresLayout);
         PropaErroresLayout.setHorizontalGroup(
@@ -648,14 +657,16 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cajaTxtValorX)
+                            .addComponent(cajaTxtValorProX)
                             .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(94, 94, 94)
+                        .addComponent(btLimpiarProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         PropaErroresLayout.setVerticalGroup(
@@ -666,7 +677,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
-                    .addComponent(cajaTxtValorX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cajaTxtValorProX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -674,7 +685,9 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLimpiarProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(126, Short.MAX_VALUE))
         );
 
@@ -913,29 +926,41 @@ public class Main extends javax.swing.JFrame {
 
     private void btCalcularProErroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCalcularProErroActionPerformed
         // TODO add your handling code here:
-        modelo = (DefaultTableModel) this.tableProErro.getModel();
-        
-        String valXproErro = cajaTxtValorX.getText();
-        BigDecimal valBigPro = new BigDecimal(valXproErro);
-        int IterProErro = Integer.parseInt(cajaTxtNumIterPro.getText());
-        
-        XYDataset data = proErro.createDataset(valBigPro, IterProErro);
-        JFreeChart chart = proErro.createChart(data);
-        
-        ChartFrame frame = new ChartFrame("PROPAGACION DE ERRORES", chart);
-        frame.pack();
-        frame.setVisible(true);
-        //tabla
-        System.out.println("Resultados de las iteraciones:");
-        for (int i = 1; i <= IterProErro; i++) {
-            BigDecimal numerator = proErro.exp(valBigPro, i);
-            BigDecimal denominator = proErro.exp(valBigPro, i).subtract(BigDecimal.ONE);
-            BigDecimal result = numerator.divide(denominator, 128, RoundingMode.HALF_UP);
+        try {
+            modelo = (DefaultTableModel) this.tableProErro.getModel();
 
-            System.out.println("Iteración " + i + ": " + result.toString());
+            String valXproErro = cajaTxtValorProX.getText();
+            BigDecimal valBigPro = new BigDecimal(valXproErro);
+            int IterProErro = Integer.parseInt(cajaTxtNumIterPro.getText());
+
+            XYDataset data = proErro.createDataset(valBigPro, IterProErro);
+            JFreeChart chart = proErro.createChart(data);
+
+            ChartFrame frame = new ChartFrame("PROPAGACION DE ERRORES", chart);
+            frame.pack();
+            frame.setVisible(true);
+            //tabla
+            for (int i = 1; i <= IterProErro; i++) {
+                BigDecimal numerator = proErro.exp(valBigPro, i);
+                BigDecimal denominator = proErro.exp(valBigPro, i).subtract(BigDecimal.ONE);
+                BigDecimal result = numerator.divide(denominator, 128, RoundingMode.HALF_UP);
+
+                Object datosProErro[] = new Object[]{i, result.toString()};
+                modelo.addRow(datosProErro);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"NO HAY DATOS EN EL PROGRAMA");
         }
-        
+
     }//GEN-LAST:event_btCalcularProErroActionPerformed
+
+    private void btLimpiarProErroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimpiarProErroActionPerformed
+        // TODO add your handling code here:
+        cajaTxtNumIterPro.setText("");
+        cajaTxtValorProX.setText("");
+        modelo.getDataVector().removeAllElements();
+        tableProErro.updateUI();
+    }//GEN-LAST:event_btLimpiarProErroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -992,13 +1017,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btErrRe;
     private javax.swing.JButton btLimErr;
     private javax.swing.JButton btLimPuntoFloat;
+    private javax.swing.JButton btLimpiarProErro;
     private javax.swing.JButton btPflota;
     private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
     private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
-    private javax.swing.JTextField cajaTxtValorX;
+    private javax.swing.JTextField cajaTxtValorProX;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1072,4 +1098,5 @@ public class Main extends javax.swing.JFrame {
         txtResPfloatHexa.setText("--");
         cajaTxtPfijoYflota.setText("");
     }
+    
 }

@@ -959,7 +959,7 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="cajaTxtValorX" max="32767" attributes="0"/>
+                                              <Component id="cajaTxtValorProX" max="32767" attributes="0"/>
                                               <Component id="cajaTxtNumIterPro" min="-2" pref="90" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -970,6 +970,8 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                                           <Component id="btCalcularProErro" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                                          <Component id="btLimpiarProErro" min="-2" pref="140" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -984,7 +986,7 @@
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cajaTxtValorX" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="cajaTxtValorProX" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -994,7 +996,10 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="btCalcularProErro" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="btCalcularProErro" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="btLimpiarProErro" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace pref="126" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -1017,7 +1022,7 @@
                             <Property name="text" type="java.lang.String" value="Ingresa el valor de &quot;X&quot;:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="cajaTxtValorX">
+                        <Component class="javax.swing.JTextField" name="cajaTxtValorProX">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel24">
                           <Properties>
@@ -1071,6 +1076,14 @@
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCalcularProErroActionPerformed"/>
+                          </Events>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="btLimpiarProErro">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btLimpiarProErroActionPerformed"/>
                           </Events>
                         </Component>
                       </SubComponents>
