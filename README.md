@@ -1,4 +1,8 @@
 
+h1 a, h2 a {
+     color: #C25100;
+}
+
 ---
 
 # *Proyecto Final en Java*
@@ -35,6 +39,21 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
 | Decimal a Binario|  |........|........|
 | Hexadecimal a Binario|   |........|........|
 
+## *Librerias*
+
+| jfreechart-1.0.19 |
+| :------------ |
+| hamcrest-core-1.3.jar| 
+| jcommon-1.0.23.jar|
+| jfreechart-1.0.19.jar|
+| jfreechart-1.0.19-experimental.jar|
+| jfreechart-1.0.19-swt.jar|
+| jfreesvg-2.0.jar|
+| junit-4.11.jar|
+| orsoncharts-1.4-eval-nofx.jar|
+| orsonpdf-1.6-eval.jar|
+| servlet.jar|
+| swtgraphics2d.jar|
 
 ## *Requisitos del sistema*
 
