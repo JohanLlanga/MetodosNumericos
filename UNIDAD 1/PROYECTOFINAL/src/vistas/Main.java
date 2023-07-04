@@ -97,6 +97,13 @@ public class Main extends javax.swing.JFrame {
         txtResPfloatHexa = new javax.swing.JLabel();
         btLimPuntoFloat = new javax.swing.JButton();
         PropaErrores = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        cajaTxtValorX = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        cajaTxtNumIterPro = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableProErro = new javax.swing.JTable();
         Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JPanel();
@@ -122,7 +129,7 @@ public class Main extends javax.swing.JFrame {
         labelTxtBinAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labelTxtBinAdec.setText("--");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("CONVERSIONES");
 
@@ -199,9 +206,6 @@ public class Main extends javax.swing.JFrame {
             .addGroup(PanConverLayout.createSequentialGroup()
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PanConverLayout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -235,15 +239,18 @@ public class Main extends javax.swing.JFrame {
                         .addGap(240, 240, 240)
                         .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanConverLayout.setVerticalGroup(
             PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanConverLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cajaTxtConver, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -255,7 +262,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -359,9 +366,6 @@ public class Main extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGap(266, 266, 266)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanErroresLayout.createSequentialGroup()
@@ -376,7 +380,10 @@ public class Main extends javax.swing.JFrame {
                         .addGap(261, 261, 261)
                         .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btLimErr, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanErroresLayout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
         PanErroresLayout.setVerticalGroup(
@@ -407,14 +414,14 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResEr, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("ERRORES", PanErrores);
 
         PunFlotante.setBackground(new java.awt.Color(255, 204, 204));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel15.setText("PUNTO FIJO Y FLOTANTE");
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -481,12 +488,6 @@ public class Main extends javax.swing.JFrame {
         PunFlotante.setLayout(PunFlotanteLayout);
         PunFlotanteLayout.setHorizontalGroup(
             PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PunFlotanteLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel16)
-                .addGap(32, 32, 32)
-                .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(185, 185, 185))
             .addGroup(PunFlotanteLayout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -524,15 +525,20 @@ public class Main extends javax.swing.JFrame {
                                 .addComponent(txtResExBin, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(PunFlotanteLayout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(jLabel15)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(PunFlotanteLayout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PunFlotanteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel15)
+                    .addGroup(PunFlotanteLayout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(32, 32, 32)
+                        .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(185, 185, 185))
         );
         PunFlotanteLayout.setVerticalGroup(
             PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -573,20 +579,82 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPfloatHexa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("P.FLOTANTE Y FLOTANTE", PunFlotante);
+
+        PropaErrores.setBackground(new java.awt.Color(204, 204, 255));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel22.setText("PROPAGACION DE ERRORES");
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel23.setText("Ingresa el valor de \"X\":");
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel24.setText("Ingresa el numero de iteraciones:");
+
+        tableProErro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Iteracion", "Valor"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableProErro);
 
         javax.swing.GroupLayout PropaErroresLayout = new javax.swing.GroupLayout(PropaErrores);
         PropaErrores.setLayout(PropaErroresLayout);
         PropaErroresLayout.setHorizontalGroup(
             PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 697, Short.MAX_VALUE)
+            .addGroup(PropaErroresLayout.createSequentialGroup()
+                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PropaErroresLayout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PropaErroresLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cajaTxtValorX)
+                            .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PropaErroresLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 617, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         PropaErroresLayout.setVerticalGroup(
             PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PropaErroresLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(cajaTxtValorX, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(197, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("PROPAGACION ERRORES", PropaErrores);
@@ -612,7 +680,7 @@ public class Main extends javax.swing.JFrame {
         );
         BiseccionLayout.setVerticalGroup(
             BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 569, Short.MAX_VALUE)
+            .addGap(0, 608, Short.MAX_VALUE)
         );
 
         Unidad1.addTab("BISECCION", Biseccion);
@@ -627,7 +695,7 @@ public class Main extends javax.swing.JFrame {
         );
         Unidad2Layout.setVerticalGroup(
             Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 639, Short.MAX_VALUE)
         );
 
         Unidades.addTab("UNIIDAD 2", Unidad2);
@@ -880,7 +948,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
+    private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
+    private javax.swing.JTextField cajaTxtValorX;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -895,6 +965,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -904,10 +977,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelTxtBinAdec;
     private javax.swing.JLabel labelTxtDecAbin;
     private javax.swing.JLabel labelTxtHexaAdeci;
     private javax.swing.JLabel labelTxtOcAdec;
+    private javax.swing.JTable tableProErro;
     private javax.swing.JLabel txtPfloatBin;
     private javax.swing.JLabel txtPfloatHexa;
     private javax.swing.JLabel txtResEa;
