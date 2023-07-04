@@ -88,6 +88,8 @@ public class Main extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         txtResMan = new javax.swing.JLabel();
         txtResValDeci = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         PropaErrores = new javax.swing.JPanel();
         Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
@@ -448,6 +450,12 @@ public class Main extends javax.swing.JFrame {
         txtResValDeci.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResValDeci.setText("--");
 
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel22.setText("VALOR BINARIO:");
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel23.setText("VALOR HEXADECIMAL:");
+
         javax.swing.GroupLayout PunFlotanteLayout = new javax.swing.GroupLayout(PunFlotante);
         PunFlotante.setLayout(PunFlotanteLayout);
         PunFlotanteLayout.setHorizontalGroup(
@@ -472,6 +480,8 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel22)
                             .addGroup(PunFlotanteLayout.createSequentialGroup()
                                 .addComponent(jLabel19)
                                 .addGap(18, 18, 18)
@@ -524,7 +534,11 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResValDeci))
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("P.FLOTANTE Y FLOTANTE", PunFlotante);
@@ -712,9 +726,8 @@ public class Main extends javax.swing.JFrame {
 
         Pfloat = cajaTxtPfijoYflota.getText();
         boolean verdad = PuntoF.verficarHexa(Pfloat);
-        
-        
-        if ( verdad == true) {
+
+        if (verdad == true) {
             int PfloatEntero = Integer.parseInt(Pfloat.substring(2), 16);
             int signo = (PfloatEntero >> 31) & 1;
             int exponente = ((PfloatEntero >> 23) & 0xFF);
@@ -724,12 +737,32 @@ public class Main extends javax.swing.JFrame {
             String exponenteBinario = String.format("%8s", Integer.toBinaryString(exponente)).replace(' ', '0');
 
             double valor = Math.pow(-1, signo) * (1 + (mantisa / Math.pow(2, 23))) * Math.pow(2, exponente - 127);
+
+            txtResSigno.setText(String.valueOf(signo));
+            txtResExBin.setText(String.valueOf(exponenteBinario));
+            txtResMan.setText(String.valueOf(mantisaBinaria));
+            txtResValDeci.setText(String.valueOf(valor));
+
+        } else {
+            float ValDeci = 0f;
+            ValDeci = Float.parseFloat(cajaTxtPfijoYflota.getText());
+
+            int bits = Float.floatToIntBits(ValDeci);
+            int signo = (bits >> 31) & 1;
+            int exponente = (bits >> 23) & 0xFF;
+            int mantisa = bits & 0x7FFFFF;
+
+            String mantisaBinaria = String.format("%23s", Integer.toBinaryString(mantisa)).replace(' ', '0');
+            String exponenteBinario = String.format("%8s", Integer.toBinaryString(exponente)).replace(' ', '0');
+            String valorBinario = String.format("%32s", Integer.toBinaryString(bits)).replace(' ', '0');
+            String valorHexa = String.format("%8s", Integer.toHexString(bits)).replace(' ', '0').toUpperCase();
+
+            float valor = (float) ((Math.pow(-1, signo) * (1 + (mantisa / Math.pow(2, 23)))) * Math.pow(2, exponente - 127));
             
             txtResSigno.setText(String.valueOf(signo));
             txtResExBin.setText(String.valueOf(exponenteBinario));
             txtResMan.setText(String.valueOf(mantisaBinaria));
             txtResValDeci.setText(String.valueOf(valor));
-            
         }
 
 
@@ -807,6 +840,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
