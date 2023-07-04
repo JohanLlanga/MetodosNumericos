@@ -1,8 +1,4 @@
 
-h1 a, h2 a {
-     color: #C25100;
-}
-
 ---
 
 # *Proyecto Final en Java*
