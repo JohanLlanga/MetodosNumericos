@@ -10,6 +10,7 @@ import metodosnumericos.Errores;
 import metodosnumericos.PuntoFlotante;
 import metodosnumericos.proErrores;
 import metodosnumericos.Biseccion;
+import metodosnumericos.Bolzano;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
@@ -35,6 +36,7 @@ public class Main extends javax.swing.JFrame {
     PuntoFlotante PuntoF = new PuntoFlotante();
     proErrores proErro = new proErrores();
     Biseccion Bisec = new Biseccion();
+    Bolzano Bolza = new Bolzano();
 
     public Main() {
         initComponents();
@@ -133,6 +135,20 @@ public class Main extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         RespuestaMB = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
+        Bolzano = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        cajaTxtInterA = new javax.swing.JTextField();
+        cajaTxtInterB = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        M_Bolzano = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        cajaTxtFuncion = new javax.swing.JTextField();
+        FuncionXD = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        cajaTxtEps = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        LimpiarMBolza = new javax.swing.JButton();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -799,6 +815,114 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.addTab("BISECCION", Biseccion);
 
+        Bolzano.setBackground(new java.awt.Color(51, 255, 0));
+
+        jLabel25.setText("Ingrese el extremo izquierdo del intervalo:");
+
+        jLabel26.setText("Ingrese el extremo derecho del intervalo:");
+
+        cajaTxtInterA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaTxtInterAActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel27.setText("METODO DE BOLZNO");
+
+        M_Bolzano.setText("INGRESAR DATOS");
+        M_Bolzano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M_BolzanoActionPerformed(evt);
+            }
+        });
+
+        jLabel28.setText("Ingrese la función (utilice 'x' como variable):");
+
+        jLabel32.setText("Ingrese la precisión deseada:");
+
+        jLabel34.setText("La aproximación de la solución es:");
+
+        LimpiarMBolza.setText("LIMPIAR");
+        LimpiarMBolza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimpiarMBolzaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BolzanoLayout = new javax.swing.GroupLayout(Bolzano);
+        Bolzano.setLayout(BolzanoLayout);
+        BolzanoLayout.setHorizontalGroup(
+            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BolzanoLayout.createSequentialGroup()
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BolzanoLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jLabel27))
+                    .addGroup(BolzanoLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BolzanoLayout.createSequentialGroup()
+                                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel28)
+                                    .addComponent(jLabel26)
+                                    .addGroup(BolzanoLayout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jLabel32))
+                                    .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(M_Bolzano)
+                                        .addComponent(jLabel25)))
+                                .addGap(56, 56, 56)
+                                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxtEps, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(BolzanoLayout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BolzanoLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FuncionXD, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(138, 138, 138))
+        );
+        BolzanoLayout.setVerticalGroup(
+            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BolzanoLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel27)
+                .addGap(37, 37, 37)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel26)
+                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel32)
+                    .addComponent(cajaTxtEps, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(M_Bolzano)
+                    .addComponent(LimpiarMBolza))
+                .addGap(59, 59, 59)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
+        );
+
+        Unidad1.addTab("BOLZANO", Bolzano);
+
         Unidades.addTab("UNIDAD 1", Unidad1);
 
         javax.swing.GroupLayout Unidad2Layout = new javax.swing.GroupLayout(Unidad2);
@@ -1060,6 +1184,30 @@ public class Main extends javax.swing.JFrame {
         LimpiarBiseccion();
     }//GEN-LAST:event_Limpiar_MBisecActionPerformed
 
+    private void cajaTxtInterAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTxtInterAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaTxtInterAActionPerformed
+
+    private void M_BolzanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_BolzanoActionPerformed
+        // TODO add your handling code here:
+        double InterA = Double.parseDouble(cajaTxtInterA.getText());
+        double InterB = Double.parseDouble(cajaTxtInterB.getText());
+        double Eps = Double.parseDouble(cajaTxtEps.getText());
+        String funcionString = cajaTxtFuncion.getText();
+
+        Function<Double, Double> funcion;
+        funcion = Bolza.CrearFuncion(funcionString);
+
+        double valorX = Bolza.EncontrarAproximacion(funcion, InterA, InterB, Eps);
+        Bolza.EvaluarFuncion(funcionString,valorX);
+        FuncionXD.setText(String.valueOf(Bolza.EncontrarAproximacion(funcion, InterA, InterB, Eps)));
+    }//GEN-LAST:event_M_BolzanoActionPerformed
+
+    private void LimpiarMBolzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarMBolzaActionPerformed
+        // TODO add your handling code here:
+        LimpiarBolzano();
+    }//GEN-LAST:event_LimpiarMBolzaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1102,8 +1250,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton BTcalOcAdeci;
     private javax.swing.JButton BTlimpiarBinAdec;
     private javax.swing.JPanel Biseccion;
+    private javax.swing.JPanel Bolzano;
+    private javax.swing.JLabel FuncionXD;
+    private javax.swing.JButton LimpiarMBolza;
     private javax.swing.JButton Limpiar_MBisec;
     private javax.swing.JButton M_Biseccion;
+    private javax.swing.JButton M_Bolzano;
     private javax.swing.JPanel PanConver;
     private javax.swing.JPanel PanErrores;
     private javax.swing.JPanel PropaErrores;
@@ -1122,9 +1274,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxtBInteA;
     private javax.swing.JTextField cajaTxtBInteB;
     private javax.swing.JTextField cajaTxtConver;
+    private javax.swing.JTextField cajaTxtEps;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
     private javax.swing.JTextField cajaTxtFB;
+    private javax.swing.JTextField cajaTxtFuncion;
+    private javax.swing.JTextField cajaTxtInterA;
+    private javax.swing.JTextField cajaTxtInterB;
     private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
     private javax.swing.JTextField cajaTxtValorProX;
@@ -1145,11 +1301,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1213,5 +1375,11 @@ public class Main extends javax.swing.JFrame {
         RespuestaMB.setText("--");
     }
     
-
+    private void LimpiarBolzano() {
+        cajaTxtFuncion.setText("");
+        cajaTxtInterA.setText("");
+        cajaTxtInterB.setText("");
+        cajaTxtEps.setText("");
+        FuncionXD.setText("--");
+    }
 }
