@@ -71,15 +71,15 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
 
 ## *Interfaces*
 
-<h3 align="center"> Interfaz de Conversiones </h3>
+<h3 align="center"> Conversiones </h3>
 
 ![//](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/18de671c-2ecd-44ad-8d3f-24850116a044)
 
-<h3 align="center"> Interfaz de Errores </h3>
+<h3 align="center"> Errores </h3>
   
 ![Errores](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/e96f3fe7-44f7-4f7e-9326-0dee1f556d0c)
 
-<h3 align="center"> Interfaz de Propagacion de Errores </h3>
+<h3 align="center"> Propagacion de Errores </h3>
 
 <h3 align="center"> Punto Flotante </h3>
 
