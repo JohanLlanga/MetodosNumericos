@@ -81,9 +81,12 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
 
 <h3 align="center"> Propagacion de Errores </h3>
 
+![PropagacionErrores](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/9a011fae-1a17-4b88-8127-a43861d42341)
+
 <h3 align="center"> Punto Flotante </h3>
 
-<h3 align="center"> Sistemas Numericos  </h3>
+![PuntoFlotante](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/8fd1c5d8-e413-41e8-9404-d14df2fd1c6f)
+
 
 ### *Codigo*
 
