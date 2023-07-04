@@ -8,12 +8,14 @@ import javax.swing.table.DefaultTableModel;
 import metodosnumericos.Conversiones;
 import metodosnumericos.Errores;
 import metodosnumericos.PuntoFlotante;
+import metodosnumericos.proErrores;
+import metodosnumericos.Biseccion;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 import java.math.RoundingMode;
+import java.util.function.Function;
 import javax.swing.JOptionPane;
-import metodosnumericos.proErrores;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYDataset;
@@ -32,6 +34,7 @@ public class Main extends javax.swing.JFrame {
     Errores Erro = new Errores();
     PuntoFlotante PuntoF = new PuntoFlotante();
     proErrores proErro = new proErrores();
+    Biseccion Bisec = new Biseccion();
 
     public Main() {
         initComponents();
@@ -118,8 +121,18 @@ public class Main extends javax.swing.JFrame {
         tableProErro = new javax.swing.JTable();
         btCalcularProErro = new javax.swing.JButton();
         btLimpiarProErro = new javax.swing.JButton();
-        Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        cajaTxtFB = new javax.swing.JTextField();
+        cajaTxtBInteA = new javax.swing.JTextField();
+        cajaTxtBInteB = new javax.swing.JTextField();
+        M_Biseccion = new javax.swing.JButton();
+        Limpiar_MBisec = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        RespuestaMB = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -276,7 +289,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
                 .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -428,7 +441,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResEr, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("ERRORES", PanErrores);
@@ -593,7 +606,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPfloatHexa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("P.FLOTANTE Y FLOTANTE", PunFlotante);
@@ -688,33 +701,100 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLimpiarProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("PROPAGACION ERRORES", PropaErrores);
 
-        javax.swing.GroupLayout BolzanoLayout = new javax.swing.GroupLayout(Bolzano);
-        Bolzano.setLayout(BolzanoLayout);
-        BolzanoLayout.setHorizontalGroup(
-            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 697, Short.MAX_VALUE)
-        );
-        BolzanoLayout.setVerticalGroup(
-            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        Biseccion.setBackground(new java.awt.Color(153, 255, 204));
 
-        Unidad1.addTab("BOLZANO", Bolzano);
+        jLabel36.setText("Ingrese la función:");
+
+        jLabel29.setText("Ingrese el límite inferior del intervalo (a):");
+
+        jLabel30.setText("Ingrese el límite superior del intervalo (b):");
+
+        M_Biseccion.setText("CALCULAR");
+        M_Biseccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M_BiseccionActionPerformed(evt);
+            }
+        });
+
+        Limpiar_MBisec.setText("LIMPIAR");
+        Limpiar_MBisec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Limpiar_MBisecActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setText("La raíz se encuentra en x = ");
+
+        RespuestaMB.setText("Respuesta");
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel33.setText("METODO BISECCION");
 
         javax.swing.GroupLayout BiseccionLayout = new javax.swing.GroupLayout(Biseccion);
         Biseccion.setLayout(BiseccionLayout);
         BiseccionLayout.setHorizontalGroup(
             BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 670, Short.MAX_VALUE)
+            .addGroup(BiseccionLayout.createSequentialGroup()
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel30)
+                                    .addComponent(jLabel29)
+                                    .addComponent(jLabel36))
+                                .addGap(79, 79, 79)
+                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                                    .addComponent(cajaTxtBInteA)
+                                    .addComponent(cajaTxtBInteB)))
+                            .addComponent(jLabel33)))
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel31)
+                            .addComponent(M_Biseccion))
+                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(Limpiar_MBisec))
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addComponent(RespuestaMB)))))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         BiseccionLayout.setVerticalGroup(
             BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BiseccionLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel33)
+                .addGap(50, 50, 50)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel29)
+                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel30)
+                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(M_Biseccion)
+                    .addComponent(Limpiar_MBisec))
+                .addGap(71, 71, 71)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(RespuestaMB))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("BISECCION", Biseccion);
@@ -729,7 +809,7 @@ public class Main extends javax.swing.JFrame {
         );
         Unidad2Layout.setVerticalGroup(
             Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGap(0, 715, Short.MAX_VALUE)
         );
 
         Unidades.addTab("UNIIDAD 2", Unidad2);
@@ -962,6 +1042,24 @@ public class Main extends javax.swing.JFrame {
         tableProErro.updateUI();
     }//GEN-LAST:event_btLimpiarProErroActionPerformed
 
+    private void M_BiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_M_BiseccionActionPerformed
+        // TODO add your handling code here:
+        double InterB_A = Double.parseDouble(cajaTxtBInteA.getText());
+        double InterB_B = Double.parseDouble(cajaTxtBInteB.getText());
+        String functionStr = cajaTxtFB.getText();
+
+        Function<Double, Double> funcionB;
+        funcionB = Bisec.CrearFuncionB(functionStr);
+        double xD = Bisec.findRoot(InterB_A, InterB_B, funcionB);
+        Bisec.evaluarFuncion(functionStr, xD);
+        RespuestaMB.setText(String.valueOf(Bisec.findRoot(InterB_A, InterB_B, funcionB)));
+    }//GEN-LAST:event_M_BiseccionActionPerformed
+
+    private void Limpiar_MBisecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Limpiar_MBisecActionPerformed
+        // TODO add your handling code here:
+        LimpiarBiseccion();
+    }//GEN-LAST:event_Limpiar_MBisecActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1004,11 +1102,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton BTcalOcAdeci;
     private javax.swing.JButton BTlimpiarBinAdec;
     private javax.swing.JPanel Biseccion;
-    private javax.swing.JPanel Bolzano;
+    private javax.swing.JButton Limpiar_MBisec;
+    private javax.swing.JButton M_Biseccion;
     private javax.swing.JPanel PanConver;
     private javax.swing.JPanel PanErrores;
     private javax.swing.JPanel PropaErrores;
     private javax.swing.JPanel PunFlotante;
+    private javax.swing.JLabel RespuestaMB;
     private javax.swing.JTabbedPane Unidad1;
     private javax.swing.JPanel Unidad2;
     private javax.swing.JTabbedPane Unidades;
@@ -1019,9 +1119,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btLimPuntoFloat;
     private javax.swing.JButton btLimpiarProErro;
     private javax.swing.JButton btPflota;
+    private javax.swing.JTextField cajaTxtBInteA;
+    private javax.swing.JTextField cajaTxtBInteB;
     private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
+    private javax.swing.JTextField cajaTxtFB;
     private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
     private javax.swing.JTextField cajaTxtValorProX;
@@ -1042,7 +1145,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1098,5 +1206,12 @@ public class Main extends javax.swing.JFrame {
         txtResPfloatHexa.setText("--");
         cajaTxtPfijoYflota.setText("");
     }
+    private void LimpiarBiseccion() {
+        cajaTxtFB.setText("");
+        cajaTxtBInteA.setText("");
+        cajaTxtBInteB.setText("");
+        RespuestaMB.setText("--");
+    }
     
+
 }
