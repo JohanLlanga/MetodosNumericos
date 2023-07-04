@@ -53,7 +53,7 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
 
 ## *Requisitos del sistema*
 
-- Java (versión X.X.X)
+- Java (versión JDK 19.0.2)
 - Sistema operativo compatible (Windows, macOS, Linux)
 
 ## *Uso*
