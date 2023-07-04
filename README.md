@@ -2,7 +2,7 @@
 ---
 
 # *Proyecto Final en Java*
-Este proyecto se llevo a cabo en el lenguaje de programacion Java Beans el cual proporciana el manejo de interfaz no tan conpleja de entender. Se utilizo JFrame el cual es una clase en Java que pertenece al paquete javax.swing. Proporciona una ventana con una interfaz gráfica de usuario (GUI) para crear aplicaciones de escritorio. Esta clase nos ayuda a crear puedes crear ventanas con barras de título, botones de minimizar, maximizar y cerrar, y otras características comunes de las ventanas de la GUI. También puedes agregar componentes gráficos, como botones, campos de texto, etiquetas, etc., para construir una interfaz interactiva para tu aplicación.
+Este proyecto se llevo a cabo en el lenguaje de programacion Java Beans el cual proporciana el manejo de interfaz no tan compleja de entender. Se utilizo JFrame el cual es una clase en Java que pertenece al paquete javax.swing. Proporciona una ventana con una interfaz gráfica de usuario (GUI) para crear aplicaciones de escritorio. Esta clase nos ayuda a crear puedes crear ventanas con barras de título, botones de minimizar, maximizar y cerrar, y otras características comunes de las ventanas de la GUI. También puedes agregar componentes gráficos, como botones, campos de texto, etiquetas, etc., para construir una interfaz interactiva para tu aplicación.
 
 ![Gif1](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/085080bb-8b42-4b90-b490-04e5ebd5d866)
 
