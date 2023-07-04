@@ -27,7 +27,7 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
 | Conversiones | Errores  | Propagacion de Errores |Punto Flotante |
 | :------------ |:---------------:|-------:|-------:|
 | Binario a Decimal| Error Absoluto |........|........|
-| Octal a Decimal| Error Relavito       |........|........|
+| Octal a Decimal| Error Relativo       |........|........|
 | Decimal a Binario|  |........|........|
 | Hexadecimal a Binario|   |........|........|
 
@@ -60,6 +60,10 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
 ![Errores](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/e96f3fe7-44f7-4f7e-9326-0dee1f556d0c)
 
 <h3 align="center"> Interfaz de Propagacion de Errores </h3>
+
+<h3 align="center"> Punto Flotante </h3>
+
+<h3 align="center"> Sistemas Numericos  </h3>
 
 ### *Codigo*
 
