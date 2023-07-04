@@ -609,10 +609,7 @@ public class Main extends javax.swing.JFrame {
 
         tableProErro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Iteracion", "Valor"
@@ -916,6 +913,8 @@ public class Main extends javax.swing.JFrame {
 
     private void btCalcularProErroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCalcularProErroActionPerformed
         // TODO add your handling code here:
+        modelo = (DefaultTableModel) this.tableProErro.getModel();
+        
         String valXproErro = cajaTxtValorX.getText();
         BigDecimal valBigPro = new BigDecimal(valXproErro);
         int IterProErro = Integer.parseInt(cajaTxtNumIterPro.getText());
@@ -923,9 +922,19 @@ public class Main extends javax.swing.JFrame {
         XYDataset data = proErro.createDataset(valBigPro, IterProErro);
         JFreeChart chart = proErro.createChart(data);
         
-        ChartFrame frame = new ChartFrame("Gráfico de Iteraciones", chart);
+        ChartFrame frame = new ChartFrame("PROPAGACION DE ERRORES", chart);
         frame.pack();
         frame.setVisible(true);
+        //tabla
+        System.out.println("Resultados de las iteraciones:");
+        for (int i = 1; i <= IterProErro; i++) {
+            BigDecimal numerator = proErro.exp(valBigPro, i);
+            BigDecimal denominator = proErro.exp(valBigPro, i).subtract(BigDecimal.ONE);
+            BigDecimal result = numerator.divide(denominator, 128, RoundingMode.HALF_UP);
+
+            System.out.println("Iteración " + i + ": " + result.toString());
+        }
+        
     }//GEN-LAST:event_btCalcularProErroActionPerformed
 
     /**

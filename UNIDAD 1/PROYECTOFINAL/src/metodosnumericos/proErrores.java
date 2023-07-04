@@ -16,7 +16,7 @@ import org.jfree.data.xy.XYDataset;
 
 /**
  *
- * @author wsvargas
+ * @author pablo
  */
 public class proErrores {
     public XYDataset createDataset(BigDecimal x, int iterations) {
