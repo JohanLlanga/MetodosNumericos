@@ -50,4 +50,48 @@ Para obtener instrucciones detalladas sobre el uso de la calculadora de conversi
 
 <h3 align="center"> Interfaz de Propagacion de Errores </h3>
 
+## *Codigo*
+
+## ![Gif2](https://github.com/JohanLlanga/MetodosNumericos/assets/134894866/ce9b440f-2925-43a5-95f0-1f18774515f1)
+
+<h4 align="center"> Botones </h4>
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton BTcalBinAdec;
+    private javax.swing.JButton BTcalDecAbin;
+    private javax.swing.JButton BTcalHexaAdeci;
+    private javax.swing.JButton BTcalOcAdeci;
+    private javax.swing.JButton BTlimpiarBinAdec;
+    private javax.swing.JTabbedPane CONVERSIONES;
+    private javax.swing.JPanel PanConver;
+    private javax.swing.JTextField cajaTxtConver;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JLabel labelTxtBinAdec;
+    private javax.swing.JLabel labelTxtDecAbin;
+    private javax.swing.JLabel labelTxtHexaAdeci;
+    private javax.swing.JLabel labelTxtOcAdec;
+    // End of variables declaration                   
+
+    private void Limpiar() {
+        cajaTxtConver.setText("");
+        labelTxtBinAdec.setText("--");
+        labelTxtDecAbin.setText("--");
+        labelTxtOcAdec.setText("--");
+        labelTxtHexaAdeci.setText("--");
+        
+    }
+}
 
