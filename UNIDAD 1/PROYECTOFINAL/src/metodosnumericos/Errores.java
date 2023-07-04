@@ -6,7 +6,7 @@ package metodosnumericos;
 
 /**
  *
- * @author pablo
+ * @author johan
  */
 public class Errores {
     

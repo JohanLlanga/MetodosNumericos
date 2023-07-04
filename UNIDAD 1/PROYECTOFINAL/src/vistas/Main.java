@@ -25,7 +25,10 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         LimpiarConver();
         LimpiarErr();
-
+        txtResPfloatBin.setVisible(false);
+        txtResPfloatHexa.setVisible(false);
+        txtPfloatBin.setVisible(false);
+        txtPfloatHexa.setVisible(false);
     }
 
     /**
@@ -88,8 +91,11 @@ public class Main extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         txtResMan = new javax.swing.JLabel();
         txtResValDeci = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        txtPfloatBin = new javax.swing.JLabel();
+        txtPfloatHexa = new javax.swing.JLabel();
+        txtResPfloatBin = new javax.swing.JLabel();
+        txtResPfloatHexa = new javax.swing.JLabel();
+        btLimPuntoFloat = new javax.swing.JButton();
         PropaErrores = new javax.swing.JPanel();
         Bolzano = new javax.swing.JPanel();
         Biseccion = new javax.swing.JPanel();
@@ -450,20 +456,31 @@ public class Main extends javax.swing.JFrame {
         txtResValDeci.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResValDeci.setText("--");
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel22.setText("VALOR BINARIO:");
+        txtPfloatBin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPfloatBin.setText("VALOR BINARIO:");
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel23.setText("VALOR HEXADECIMAL:");
+        txtPfloatHexa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPfloatHexa.setText("VALOR HEXADECIMAL:");
+
+        txtResPfloatBin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtResPfloatBin.setText("--");
+
+        txtResPfloatHexa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtResPfloatHexa.setText("--");
+
+        btLimPuntoFloat.setBackground(new java.awt.Color(255, 102, 102));
+        btLimPuntoFloat.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btLimPuntoFloat.setText("LIMPIAR");
+        btLimPuntoFloat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimPuntoFloatActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PunFlotanteLayout = new javax.swing.GroupLayout(PunFlotante);
         PunFlotante.setLayout(PunFlotanteLayout);
         PunFlotanteLayout.setHorizontalGroup(
             PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                .addGap(204, 204, 204)
-                .addComponent(jLabel15)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PunFlotanteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel16)
@@ -480,30 +497,42 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23)
-                            .addComponent(jLabel22)
                             .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(jLabel19)
+                                .addComponent(txtPfloatHexa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PunFlotanteLayout.createSequentialGroup()
+                                .addComponent(txtPfloatBin)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtResExBin, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtResPfloatBin, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PunFlotanteLayout.createSequentialGroup()
                                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                        .addGap(32, 32, 32)
-                                        .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                                .addGap(29, 29, 29)
-                                                .addComponent(jLabel17))))
+                                        .addGap(61, 61, 61)
+                                        .addComponent(jLabel17))
                                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(txtResSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(PunFlotanteLayout.createSequentialGroup()
                                 .addComponent(jLabel21)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtResValDeci, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 107, Short.MAX_VALUE))))
+                                .addComponent(txtResValDeci, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(PunFlotanteLayout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtResExBin, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(PunFlotanteLayout.createSequentialGroup()
+                .addGap(204, 204, 204)
+                .addComponent(jLabel15)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PunFlotanteLayout.createSequentialGroup()
+                .addGap(76, 76, 76)
+                .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
         );
         PunFlotanteLayout.setVerticalGroup(
             PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -514,9 +543,11 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(58, 58, 58)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
                 .addComponent(jLabel17)
                 .addGap(36, 36, 36)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -534,10 +565,14 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResValDeci))
+                .addGap(12, 12, 12)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(txtResPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPfloatHexa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
@@ -728,6 +763,12 @@ public class Main extends javax.swing.JFrame {
         boolean verdad = PuntoF.verficarHexa(Pfloat);
 
         if (verdad == true) {
+
+            txtResPfloatBin.setVisible(false);
+            txtResPfloatHexa.setVisible(false);
+            txtPfloatBin.setVisible(false);
+            txtPfloatHexa.setVisible(false);
+
             int PfloatEntero = Integer.parseInt(Pfloat.substring(2), 16);
             int signo = (PfloatEntero >> 31) & 1;
             int exponente = ((PfloatEntero >> 23) & 0xFF);
@@ -744,6 +785,12 @@ public class Main extends javax.swing.JFrame {
             txtResValDeci.setText(String.valueOf(valor));
 
         } else {
+
+            txtResPfloatBin.setVisible(true);
+            txtResPfloatHexa.setVisible(true);
+            txtPfloatBin.setVisible(true);
+            txtPfloatHexa.setVisible(true);
+
             float ValDeci = 0f;
             ValDeci = Float.parseFloat(cajaTxtPfijoYflota.getText());
 
@@ -758,15 +805,22 @@ public class Main extends javax.swing.JFrame {
             String valorHexa = String.format("%8s", Integer.toHexString(bits)).replace(' ', '0').toUpperCase();
 
             float valor = (float) ((Math.pow(-1, signo) * (1 + (mantisa / Math.pow(2, 23)))) * Math.pow(2, exponente - 127));
-            
+
             txtResSigno.setText(String.valueOf(signo));
             txtResExBin.setText(String.valueOf(exponenteBinario));
             txtResMan.setText(String.valueOf(mantisaBinaria));
             txtResValDeci.setText(String.valueOf(valor));
+            txtResPfloatBin.setText(String.valueOf(valorBinario));
+            txtResPfloatHexa.setText(String.valueOf("0X" + valorHexa));
         }
 
 
     }//GEN-LAST:event_btPflotaActionPerformed
+
+    private void btLimPuntoFloatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimPuntoFloatActionPerformed
+        // TODO add your handling code here:
+        LimpiarPuntoFlotante();
+    }//GEN-LAST:event_btLimPuntoFloatActionPerformed
 
     /**
      * @param args the command line arguments
@@ -821,6 +875,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btErrAbs;
     private javax.swing.JButton btErrRe;
     private javax.swing.JButton btLimErr;
+    private javax.swing.JButton btLimPuntoFloat;
     private javax.swing.JButton btPflota;
     private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
@@ -840,8 +895,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -855,10 +908,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel labelTxtDecAbin;
     private javax.swing.JLabel labelTxtHexaAdeci;
     private javax.swing.JLabel labelTxtOcAdec;
+    private javax.swing.JLabel txtPfloatBin;
+    private javax.swing.JLabel txtPfloatHexa;
     private javax.swing.JLabel txtResEa;
     private javax.swing.JLabel txtResEr;
     private javax.swing.JLabel txtResExBin;
     private javax.swing.JLabel txtResMan;
+    private javax.swing.JLabel txtResPfloatBin;
+    private javax.swing.JLabel txtResPfloatHexa;
     private javax.swing.JLabel txtResSigno;
     private javax.swing.JLabel txtResValDeci;
     // End of variables declaration//GEN-END:variables
@@ -877,5 +934,19 @@ public class Main extends javax.swing.JFrame {
         txtResEr.setText("--");
         cajaTxtErrN1.setText("");
         cajaTxtErrN2.setText("");
+    }
+
+    private void LimpiarPuntoFlotante() {
+        txtResPfloatBin.setVisible(false);
+        txtResPfloatHexa.setVisible(false);
+        txtPfloatBin.setVisible(false);
+        txtPfloatHexa.setVisible(false);
+        txtResSigno.setText("--");
+        txtResExBin.setText("--");
+        txtResMan.setText("--");
+        txtResValDeci.setText("--");
+        txtResPfloatBin.setText("--");
+        txtResPfloatHexa.setText("--");
+        cajaTxtPfijoYflota.setText("");
     }
 }
