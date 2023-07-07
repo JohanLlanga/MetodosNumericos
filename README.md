@@ -25,13 +25,17 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
 - Binario
 - Decimal
 - Hexadecimal.
+
 Calculo de Errores
+
 - Error relativo
 - Error absoluto
+  
 Calculo de Propagacion de errores
-- 
+
 Calculo de Punto Flotante
-- 
+
+
 
   
 ## *Contenido/Tabla*
