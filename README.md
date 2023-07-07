@@ -57,11 +57,11 @@ Calculadora de conversiones numéricas que permite realizar conversiones entre d
 - Sistema operativo compatible (Windows, macOS, Linux)
 
 ## *Uso*
-1. Descarga el archivo ejecutable `metodos_numericos.jar` desde [enlace_del_repositorio].
-2. Abre una terminal o línea de comandos.
-3. Navega hasta la ubicación donde se encuentra el archivo `metodos_numericos.jar`.
-4. Ejecuta el siguiente comando: `java -jar metodos_numericos.jar`.
-5. Sigue las instrucciones en pantalla para utilizar la calculadora de conversiones numéricas.
+1. Descarga el archivo ejecutable metodos_numericos.jar desde [enlace_del_proyecto].
+2. Abrir el proyecto en un IDE de Java.
+3. Importar las librerías necesarias para que se ejecute correctamente el proyecto.
+4. Ejecutar la clase Main.java del paquete vistas para correr el programa.
+5. Sigue las instrucciones en pantalla para utilizar la calculadora inteligente.
 
 ## *Manual de usuario*
 
