@@ -68,7 +68,7 @@ Calculo de Punto Flotante
 - Java (versión JDK 19.0.2)
 - Sistema operativo compatible (Windows, macOS, Linux)
 
-## *Uso*
+## *Levantamiento del proyecto*
 1. Descarga el archivo ejecutable metodos_numericos.jar desde [enlace_del_proyecto].
 2. Abrir el proyecto en un IDE de Java.
 3. Importar las librerías necesarias para que se ejecute correctamente el proyecto.
