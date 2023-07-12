@@ -4,7 +4,6 @@
  */
 package metodosnumericos;
 import java.util.function.Function;
-
 /**
  *
  * @author maikd
