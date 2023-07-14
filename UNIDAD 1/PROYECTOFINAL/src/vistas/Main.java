@@ -4,6 +4,8 @@
  */
 package vistas;
 
+import com.itextpdf.text.DocumentException;
+import java.io.FileNotFoundException;
 import javax.swing.table.DefaultTableModel;
 import metodosnumericos.Conversiones;
 import metodosnumericos.Errores;
@@ -11,12 +13,16 @@ import metodosnumericos.PuntoFlotante;
 import metodosnumericos.proErrores;
 import metodosnumericos.Biseccion;
 import metodosnumericos.Bolzano;
+import metodosnumericos.Graficador;
+import metodosnumericos.EspMetricos;
+
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.function.Function;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import metodosnumericos.GenPDF;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYDataset;
@@ -37,6 +43,9 @@ public class Main extends javax.swing.JFrame {
     proErrores proErro = new proErrores();
     Biseccion Bisec = new Biseccion();
     Bolzano Bolza = new Bolzano();
+    Graficador Graf = new Graficador();
+    EspMetricos Esp = new EspMetricos();
+    GenPDF generar = new GenPDF();
 
     public Main() {
         initComponents();
@@ -113,6 +122,7 @@ public class Main extends javax.swing.JFrame {
         txtResPfloatBin = new javax.swing.JLabel();
         txtResPfloatHexa = new javax.swing.JLabel();
         btLimPuntoFloat = new javax.swing.JButton();
+        GenPDFPuntoFyF = new javax.swing.JButton();
         PropaErrores = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
@@ -123,6 +133,18 @@ public class Main extends javax.swing.JFrame {
         tableProErro = new javax.swing.JTable();
         btCalcularProErro = new javax.swing.JButton();
         btLimpiarProErro = new javax.swing.JButton();
+        Bolzano = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        cajaTxtInterA = new javax.swing.JTextField();
+        cajaTxtInterB = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        M_Bolzano = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        cajaTxtFuncion = new javax.swing.JTextField();
+        FuncionXD = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        LimpiarMBolza = new javax.swing.JButton();
         Biseccion = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -135,20 +157,22 @@ public class Main extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         RespuestaMB = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        Bolzano = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        cajaTxtInterA = new javax.swing.JTextField();
-        cajaTxtInterB = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
-        M_Bolzano = new javax.swing.JButton();
-        jLabel28 = new javax.swing.JLabel();
-        cajaTxtFuncion = new javax.swing.JTextField();
-        FuncionXD = new javax.swing.JLabel();
+        EspMetricos = new javax.swing.JPanel();
+        CalcularEsMetricos = new javax.swing.JButton();
+        Limpiar_Espacios = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
-        cajaTxtEps = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        LimpiarMBolza = new javax.swing.JButton();
+        cajaTxt_x1 = new javax.swing.JTextField();
+        cajaTxt_y1 = new javax.swing.JTextField();
+        cajaTxt_x2 = new javax.swing.JTextField();
+        cajaTxt_y2 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        Respuesta_Esp = new javax.swing.JLabel();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -161,7 +185,18 @@ public class Main extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
-        PanConver.setBackground(new java.awt.Color(255, 255, 51));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 711, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        PanConver.setBackground(new java.awt.Color(255, 255, 153));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("INGRESA EL NUMERO:");
@@ -256,11 +291,11 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(PanConverLayout.createSequentialGroup()
                         .addGap(145, 145, 145)
                         .addComponent(jLabel2)
@@ -286,7 +321,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(PanConverLayout.createSequentialGroup()
                         .addGap(213, 213, 213)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         PanConverLayout.setVerticalGroup(
             PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,7 +340,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -325,7 +360,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("CONVERSIONES", PanConver);
@@ -427,7 +462,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(250, 250, 250)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         PanErroresLayout.setVerticalGroup(
             PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -457,7 +492,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResEr, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("ERRORES", PanErrores);
@@ -527,6 +562,15 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        GenPDFPuntoFyF.setBackground(new java.awt.Color(255, 102, 102));
+        GenPDFPuntoFyF.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        GenPDFPuntoFyF.setText("PDF");
+        GenPDFPuntoFyF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GenPDFPuntoFyFActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PunFlotanteLayout = new javax.swing.GroupLayout(PunFlotante);
         PunFlotante.setLayout(PunFlotanteLayout);
         PunFlotanteLayout.setHorizontalGroup(
@@ -569,9 +613,11 @@ public class Main extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(PunFlotanteLayout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btPflota, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                .addGap(63, 63, 63)
+                .addComponent(GenPDFPuntoFyF)
+                .addGap(68, 68, 68)
+                .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PunFlotanteLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -595,7 +641,8 @@ public class Main extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPflota, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GenPDFPuntoFyF, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(jLabel17)
                 .addGap(36, 36, 36)
@@ -622,7 +669,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPfloatHexa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("P.FLOTANTE Y FLOTANTE", PunFlotante);
@@ -696,7 +743,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94)
                         .addComponent(btLimpiarProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         PropaErroresLayout.setVerticalGroup(
             PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -717,108 +764,17 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCalcularProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btLimpiarProErro, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(145, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("PROPAGACION ERRORES", PropaErrores);
 
-        Biseccion.setBackground(new java.awt.Color(153, 255, 204));
+        Bolzano.setBackground(new java.awt.Color(204, 255, 204));
 
-        jLabel36.setText("Ingrese la función:");
-
-        jLabel29.setText("Ingrese el límite inferior del intervalo (a):");
-
-        jLabel30.setText("Ingrese el límite superior del intervalo (b):");
-
-        M_Biseccion.setText("CALCULAR");
-        M_Biseccion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                M_BiseccionActionPerformed(evt);
-            }
-        });
-
-        Limpiar_MBisec.setText("LIMPIAR");
-        Limpiar_MBisec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Limpiar_MBisecActionPerformed(evt);
-            }
-        });
-
-        jLabel31.setText("La raíz se encuentra en x = ");
-
-        RespuestaMB.setText("Respuesta");
-
-        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel33.setText("METODO BISECCION");
-
-        javax.swing.GroupLayout BiseccionLayout = new javax.swing.GroupLayout(Biseccion);
-        Biseccion.setLayout(BiseccionLayout);
-        BiseccionLayout.setHorizontalGroup(
-            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BiseccionLayout.createSequentialGroup()
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel30)
-                                    .addComponent(jLabel29)
-                                    .addComponent(jLabel36))
-                                .addGap(79, 79, 79)
-                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                                    .addComponent(cajaTxtBInteA)
-                                    .addComponent(cajaTxtBInteB)))
-                            .addComponent(jLabel33)))
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel31)
-                            .addComponent(M_Biseccion))
-                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(Limpiar_MBisec))
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addComponent(RespuestaMB)))))
-                .addContainerGap(195, Short.MAX_VALUE))
-        );
-        BiseccionLayout.setVerticalGroup(
-            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BiseccionLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel33)
-                .addGap(50, 50, 50)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel36)
-                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel29)
-                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel30)
-                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(M_Biseccion)
-                    .addComponent(Limpiar_MBisec))
-                .addGap(71, 71, 71)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(RespuestaMB))
-                .addContainerGap(302, Short.MAX_VALUE))
-        );
-
-        Unidad1.addTab("BISECCION", Biseccion);
-
-        Bolzano.setBackground(new java.awt.Color(51, 255, 0));
-
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Ingrese el extremo izquierdo del intervalo:");
 
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel26.setText("Ingrese el extremo derecho del intervalo:");
 
         cajaTxtInterA.addActionListener(new java.awt.event.ActionListener() {
@@ -828,8 +784,10 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel27.setText("METODO DE BOLZNO");
+        jLabel27.setText("METODO DE BOLZANO");
 
+        M_Bolzano.setBackground(new java.awt.Color(0, 204, 204));
+        M_Bolzano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         M_Bolzano.setText("INGRESAR DATOS");
         M_Bolzano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -837,12 +795,23 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setText("Ingrese la función (utilice 'x' como variable):");
 
-        jLabel32.setText("Ingrese la precisión deseada:");
+        cajaTxtFuncion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaTxtFuncionActionPerformed(evt);
+            }
+        });
 
+        FuncionXD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        FuncionXD.setText("--");
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel34.setText("La aproximación de la solución es:");
 
+        LimpiarMBolza.setBackground(new java.awt.Color(0, 204, 204));
+        LimpiarMBolza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LimpiarMBolza.setText("LIMPIAR");
         LimpiarMBolza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -855,39 +824,35 @@ public class Main extends javax.swing.JFrame {
         BolzanoLayout.setHorizontalGroup(
             BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BolzanoLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel26))
+                .addGap(39, 39, 39)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 76, Short.MAX_VALUE))
+            .addGroup(BolzanoLayout.createSequentialGroup()
+                .addGap(199, 199, 199)
+                .addComponent(jLabel27)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(BolzanoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(M_Bolzano, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(199, 199, 199)
-                        .addComponent(jLabel27))
+                        .addGap(22, 22, 22)
+                        .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BolzanoLayout.createSequentialGroup()
-                                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel26)
-                                    .addGroup(BolzanoLayout.createSequentialGroup()
-                                        .addGap(31, 31, 31)
-                                        .addComponent(jLabel32))
-                                    .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(M_Bolzano)
-                                        .addComponent(jLabel25)))
-                                .addGap(56, 56, 56)
-                                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cajaTxtEps, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(BolzanoLayout.createSequentialGroup()
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(106, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BolzanoLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FuncionXD, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(138, 138, 138))
+                        .addGap(38, 38, 38)
+                        .addComponent(FuncionXD, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BolzanoLayout.setVerticalGroup(
             BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -902,26 +867,271 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
                     .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(31, 31, 31)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel32)
-                    .addComponent(cajaTxtEps, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
+                .addGap(41, 41, 41)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(M_Bolzano)
-                    .addComponent(LimpiarMBolza))
-                .addGap(59, 59, 59)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
-                .addContainerGap(209, Short.MAX_VALUE))
+                    .addComponent(M_Bolzano, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FuncionXD, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         Unidad1.addTab("BOLZANO", Bolzano);
+
+        Biseccion.setBackground(new java.awt.Color(153, 255, 204));
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel36.setText("Ingrese la función:");
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel29.setText("Ingrese el límite inferior del intervalo (a):");
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel30.setText("Ingrese el límite superior del intervalo (b):");
+
+        M_Biseccion.setBackground(new java.awt.Color(102, 204, 255));
+        M_Biseccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        M_Biseccion.setText("CALCULAR");
+        M_Biseccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                M_BiseccionActionPerformed(evt);
+            }
+        });
+
+        Limpiar_MBisec.setBackground(new java.awt.Color(102, 204, 255));
+        Limpiar_MBisec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Limpiar_MBisec.setText("LIMPIAR");
+        Limpiar_MBisec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Limpiar_MBisecActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel31.setText("La raíz se encuentra en x = ");
+
+        RespuestaMB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        RespuestaMB.setText("Respuesta");
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel33.setText("METODO BISECCION");
+
+        javax.swing.GroupLayout BiseccionLayout = new javax.swing.GroupLayout(Biseccion);
+        Biseccion.setLayout(BiseccionLayout);
+        BiseccionLayout.setHorizontalGroup(
+            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BiseccionLayout.createSequentialGroup()
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(M_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addGap(33, 33, 33)
+                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel29))))
+                .addContainerGap(111, Short.MAX_VALUE))
+            .addGroup(BiseccionLayout.createSequentialGroup()
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel31)
+                        .addGap(44, 44, 44)
+                        .addComponent(RespuestaMB))
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(jLabel33)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        BiseccionLayout.setVerticalGroup(
+            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BiseccionLayout.createSequentialGroup()
+                .addContainerGap(86, Short.MAX_VALUE)
+                .addComponent(jLabel33)
+                .addGap(42, 42, 42)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel36)
+                    .addComponent(cajaTxtFB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel30))
+                .addGap(73, 73, 73)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(M_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(RespuestaMB))
+                .addGap(147, 147, 147))
+        );
+
+        Unidad1.addTab("BISECCION", Biseccion);
+
+        EspMetricos.setBackground(new java.awt.Color(255, 255, 204));
+
+        CalcularEsMetricos.setText("CALCULAR");
+        CalcularEsMetricos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalcularEsMetricosActionPerformed(evt);
+            }
+        });
+
+        Limpiar_Espacios.setText("LIMPIAR");
+        Limpiar_Espacios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Limpiar_EspaciosActionPerformed(evt);
+            }
+        });
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel32.setText("ESPACIOS METRICOS");
+
+        cajaTxt_x1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        cajaTxt_y1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        cajaTxt_x2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        cajaTxt_y2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cajaTxt_y2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaTxt_y2ActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel35.setText("Ingrese las coordenadas del primer punto:  (");
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setText(";");
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel38.setText(")");
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel39.setText("Ingrese las coordenadas del segundo punto: (");
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel40.setText(";");
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setText(")");
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel42.setText("La distancia entre los dos puntos es:");
+
+        Respuesta_Esp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Respuesta_Esp.setText("--");
+
+        javax.swing.GroupLayout EspMetricosLayout = new javax.swing.GroupLayout(EspMetricos);
+        EspMetricos.setLayout(EspMetricosLayout);
+        EspMetricosLayout.setHorizontalGroup(
+            EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EspMetricosLayout.createSequentialGroup()
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EspMetricosLayout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel39)
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(EspMetricosLayout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel42)
+                                    .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EspMetricosLayout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Respuesta_Esp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)))
+                            .addGroup(EspMetricosLayout.createSequentialGroup()
+                                .addGap(104, 104, 104)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cajaTxt_y2))
+                                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cajaTxt_y1)))
+                                .addGap(17, 17, 17)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel38)
+                                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jLabel41))))))
+                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel32)
+                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(cajaTxt_x2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                                .addComponent(cajaTxt_x1, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                .addGap(100, 100, 100))
+        );
+        EspMetricosLayout.setVerticalGroup(
+            EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EspMetricosLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel32)
+                .addGap(51, 51, 51)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(EspMetricosLayout.createSequentialGroup()
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cajaTxt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel35)
+                                    .addComponent(jLabel37))
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel39))
+                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cajaTxt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel40)
+                                .addComponent(cajaTxt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(53, 53, 53)
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(75, 75, 75)
+                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel42)
+                            .addComponent(Respuesta_Esp)))
+                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(EspMetricosLayout.createSequentialGroup()
+                            .addComponent(jLabel38)
+                            .addGap(48, 48, 48))
+                        .addComponent(jLabel41)))
+                .addContainerGap(231, Short.MAX_VALUE))
+        );
+
+        Unidad1.addTab("ESPACIOS METRICOS", EspMetricos);
 
         Unidades.addTab("UNIDAD 1", Unidad1);
 
@@ -929,30 +1139,14 @@ public class Main extends javax.swing.JFrame {
         Unidad2.setLayout(Unidad2Layout);
         Unidad2Layout.setHorizontalGroup(
             Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 697, Short.MAX_VALUE)
+            .addGap(0, 660, Short.MAX_VALUE)
         );
         Unidad2Layout.setVerticalGroup(
             Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 715, Short.MAX_VALUE)
+            .addGap(0, 688, Short.MAX_VALUE)
         );
 
         Unidades.addTab("UNIIDAD 2", Unidad2);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -964,14 +1158,17 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(131, 131, 131)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Unidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -981,12 +1178,14 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         pack();
@@ -1173,10 +1372,13 @@ public class Main extends javax.swing.JFrame {
         String functionStr = cajaTxtFB.getText();
 
         Function<Double, Double> funcionB;
-        funcionB = Bisec.CrearFuncionB(functionStr);
+        funcionB = Bisec.CrearFuncionBis(functionStr);
         double xD = Bisec.findRoot(InterB_A, InterB_B, funcionB);
         Bisec.evaluarFuncion(functionStr, xD);
         RespuestaMB.setText(String.valueOf(Bisec.findRoot(InterB_A, InterB_B, funcionB)));
+        Bisec.solveBisection(InterB_A, InterB_B, funcionB);
+        Graf.generarGrafica(functionStr, InterB_A, InterB_B);
+        Bisec.mostrarGrafica(functionStr,InterB_A, InterB_B, funcionB);
     }//GEN-LAST:event_M_BiseccionActionPerformed
 
     private void Limpiar_MBisecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Limpiar_MBisecActionPerformed
@@ -1192,21 +1394,58 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         double InterA = Double.parseDouble(cajaTxtInterA.getText());
         double InterB = Double.parseDouble(cajaTxtInterB.getText());
-        double Eps = Double.parseDouble(cajaTxtEps.getText());
         String funcionString = cajaTxtFuncion.getText();
 
         Function<Double, Double> funcion;
         funcion = Bolza.CrearFuncion(funcionString);
 
-        double valorX = Bolza.EncontrarAproximacion(funcion, InterA, InterB, Eps);
+        double valorX = Bolza.EncontrarAproximacion(funcion, InterA, InterB);
         Bolza.EvaluarFuncion(funcionString,valorX);
-        FuncionXD.setText(String.valueOf(Bolza.EncontrarAproximacion(funcion, InterA, InterB, Eps)));
+        Graf.generarGrafica(funcionString, InterA, InterB);
+        FuncionXD.setText(String.valueOf(Bolza.EncontrarAproximacion(funcion, InterA, InterB)));
     }//GEN-LAST:event_M_BolzanoActionPerformed
 
     private void LimpiarMBolzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarMBolzaActionPerformed
         // TODO add your handling code here:
         LimpiarBolzano();
     }//GEN-LAST:event_LimpiarMBolzaActionPerformed
+
+    private void cajaTxtFuncionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTxtFuncionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaTxtFuncionActionPerformed
+
+    private void CalcularEsMetricosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularEsMetricosActionPerformed
+        // TODO add your handling code here:
+        double x1 = Double.parseDouble(cajaTxt_x1.getText());
+        double y1 = Double.parseDouble(cajaTxt_y1.getText());
+        double x2 = Double.parseDouble(cajaTxt_x2.getText());
+        double y2 = Double.parseDouble(cajaTxt_y2.getText());
+        Respuesta_Esp.setText(String.valueOf(Esp.calcularDistancia(x1, y1, x2, y2)));
+        Esp.generarGrafico(x1, y1, x2, y2);
+
+    }//GEN-LAST:event_CalcularEsMetricosActionPerformed
+
+    private void cajaTxt_y2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTxt_y2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaTxt_y2ActionPerformed
+
+    private void Limpiar_EspaciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Limpiar_EspaciosActionPerformed
+        // TODO add your handling code here:
+        LimpiarEspMetricos();
+    }//GEN-LAST:event_Limpiar_EspaciosActionPerformed
+
+    private void GenPDFPuntoFyFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GenPDFPuntoFyFActionPerformed
+        // TODO add your handling code here:
+        try {
+            String nombre = JOptionPane.showInputDialog("Ingresa el nombre del nuevo archivo");
+            generar.generar(nombre, cajaTxtPfijoYflota.getText(), txtResSigno.getText(), txtResExBin.getText(), txtResMan.getText(), txtResValDeci.getText());
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }       
+    }//GEN-LAST:event_GenPDFPuntoFyFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1251,8 +1490,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton BTlimpiarBinAdec;
     private javax.swing.JPanel Biseccion;
     private javax.swing.JPanel Bolzano;
+    private javax.swing.JButton CalcularEsMetricos;
+    private javax.swing.JPanel EspMetricos;
     private javax.swing.JLabel FuncionXD;
+    private javax.swing.JButton GenPDFPuntoFyF;
     private javax.swing.JButton LimpiarMBolza;
+    private javax.swing.JButton Limpiar_Espacios;
     private javax.swing.JButton Limpiar_MBisec;
     private javax.swing.JButton M_Biseccion;
     private javax.swing.JButton M_Bolzano;
@@ -1261,6 +1504,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel PropaErrores;
     private javax.swing.JPanel PunFlotante;
     private javax.swing.JLabel RespuestaMB;
+    private javax.swing.JLabel Respuesta_Esp;
     private javax.swing.JTabbedPane Unidad1;
     private javax.swing.JPanel Unidad2;
     private javax.swing.JTabbedPane Unidades;
@@ -1274,7 +1518,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxtBInteA;
     private javax.swing.JTextField cajaTxtBInteB;
     private javax.swing.JTextField cajaTxtConver;
-    private javax.swing.JTextField cajaTxtEps;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
     private javax.swing.JTextField cajaTxtFB;
@@ -1284,6 +1527,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
     private javax.swing.JTextField cajaTxtValorProX;
+    private javax.swing.JTextField cajaTxt_x1;
+    private javax.swing.JTextField cajaTxt_x2;
+    private javax.swing.JTextField cajaTxt_y1;
+    private javax.swing.JTextField cajaTxt_y2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1312,8 +1559,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1379,7 +1633,14 @@ public class Main extends javax.swing.JFrame {
         cajaTxtFuncion.setText("");
         cajaTxtInterA.setText("");
         cajaTxtInterB.setText("");
-        cajaTxtEps.setText("");
         FuncionXD.setText("--");
+    }
+    
+    private void LimpiarEspMetricos() {
+        cajaTxt_x1.setText("");
+        cajaTxt_y1.setText("");
+        cajaTxt_x2.setText("");
+        cajaTxt_y2.setText("");
+        Respuesta_Esp.setText("--");
     }
 }

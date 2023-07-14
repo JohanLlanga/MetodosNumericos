@@ -19,7 +19,8 @@ public class Bolzano {
         return x;
     }
     
-    public double EncontrarAproximacion(Function<Double, Double> funcion, double a, double b, double epsilon) {
+    public double EncontrarAproximacion(Function<Double, Double> funcion, double a, double b) {
+        double epsilon = 0.0001;
         double fa = funcion.apply(a);
         double fb = funcion.apply(b);
 
