@@ -173,6 +173,7 @@ public class Main extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         Respuesta_Esp = new javax.swing.JLabel();
+        SerieTylor = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1133,6 +1134,19 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.addTab("ESPACIOS METRICOS", EspMetricos);
 
+        javax.swing.GroupLayout SerieTylorLayout = new javax.swing.GroupLayout(SerieTylor);
+        SerieTylor.setLayout(SerieTylorLayout);
+        SerieTylorLayout.setHorizontalGroup(
+            SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 686, Short.MAX_VALUE)
+        );
+        SerieTylorLayout.setVerticalGroup(
+            SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 627, Short.MAX_VALUE)
+        );
+
+        Unidad1.addTab("tab8", SerieTylor);
+
         Unidades.addTab("UNIDAD 1", Unidad1);
 
         javax.swing.GroupLayout Unidad2Layout = new javax.swing.GroupLayout(Unidad2);
@@ -1505,6 +1519,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel PunFlotante;
     private javax.swing.JLabel RespuestaMB;
     private javax.swing.JLabel Respuesta_Esp;
+    private javax.swing.JPanel SerieTylor;
     private javax.swing.JTabbedPane Unidad1;
     private javax.swing.JPanel Unidad2;
     private javax.swing.JTabbedPane Unidades;
