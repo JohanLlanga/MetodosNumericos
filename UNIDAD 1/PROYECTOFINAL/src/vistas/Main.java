@@ -71,24 +71,6 @@ public class Main extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Unidades = new javax.swing.JTabbedPane();
         Unidad1 = new javax.swing.JTabbedPane();
-        PanConver = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        cajaTxtConver = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        labelTxtBinAdec = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        BTcalBinAdec = new javax.swing.JButton();
-        BTlimpiarBinAdec = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        BTcalDecAbin = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        labelTxtDecAbin = new javax.swing.JLabel();
-        BTcalOcAdeci = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        labelTxtOcAdec = new javax.swing.JLabel();
-        BTcalHexaAdeci = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        labelTxtHexaAdeci = new javax.swing.JLabel();
         PanErrores = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -174,11 +156,29 @@ public class Main extends javax.swing.JFrame {
         jLabel42 = new javax.swing.JLabel();
         Respuesta_Esp = new javax.swing.JLabel();
         SerieTylor = new javax.swing.JPanel();
+        PanConver = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        cajaTxtConver = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        labelTxtBinAdec = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        BTcalBinAdec = new javax.swing.JButton();
+        BTlimpiarBinAdec = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        BTcalDecAbin = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        labelTxtDecAbin = new javax.swing.JLabel();
+        BTcalOcAdeci = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        labelTxtOcAdec = new javax.swing.JLabel();
+        BTcalHexaAdeci = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        labelTxtHexaAdeci = new javax.swing.JLabel();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(2, 115, 51));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -197,199 +197,11 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        PanConver.setBackground(new java.awt.Color(255, 255, 153));
+        Unidades.setBackground(new java.awt.Color(38, 38, 38));
+        Unidades.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("INGRESA EL NUMERO:");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("RESULTADOS:");
-
-        labelTxtBinAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtBinAdec.setText("--");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("CONVERSIONES");
-
-        BTcalBinAdec.setBackground(new java.awt.Color(153, 255, 153));
-        BTcalBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalBinAdec.setText("BINARIO A DECIMAL");
-        BTcalBinAdec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalBinAdecActionPerformed(evt);
-            }
-        });
-
-        BTlimpiarBinAdec.setBackground(new java.awt.Color(153, 255, 153));
-        BTlimpiarBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTlimpiarBinAdec.setText("LIMPIAR");
-        BTlimpiarBinAdec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTlimpiarBinAdecActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("BINARIO A DECIMAL:");
-
-        BTcalDecAbin.setBackground(new java.awt.Color(153, 255, 153));
-        BTcalDecAbin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalDecAbin.setText("DECIMAL A BINARIO");
-        BTcalDecAbin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalDecAbinActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("DECIMAL A BINARIO:");
-
-        labelTxtDecAbin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtDecAbin.setText("--");
-
-        BTcalOcAdeci.setBackground(new java.awt.Color(153, 255, 153));
-        BTcalOcAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalOcAdeci.setText("OCTAL A DECIMAL");
-        BTcalOcAdeci.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalOcAdeciActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("OCTAL A DECIMAL:");
-
-        labelTxtOcAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtOcAdec.setText("--");
-
-        BTcalHexaAdeci.setBackground(new java.awt.Color(153, 255, 153));
-        BTcalHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalHexaAdeci.setText("HEXADECIMAL A DECIMAL");
-        BTcalHexaAdeci.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalHexaAdeciActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("HEXADECIMAL A DECIMAL:");
-
-        labelTxtHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtHexaAdeci.setText("--");
-
-        javax.swing.GroupLayout PanConverLayout = new javax.swing.GroupLayout(PanConver);
-        PanConver.setLayout(PanConverLayout);
-        PanConverLayout.setHorizontalGroup(
-            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanConverLayout.createSequentialGroup()
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(184, 184, 184))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(cajaTxtConver)
-                                .addGap(73, 73, 73))))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(299, 299, 299))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(184, 184, 184))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(155, 155, 155)))
-                .addGap(128, 128, 128))
-        );
-        PanConverLayout.setVerticalGroup(
-            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanConverLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(cajaTxtConver, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)))
-                .addGap(26, 26, 26)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(43, 43, 43)
-                .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                .addGap(6, 6, 6)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)))
-                .addGap(6, 6, 6)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)))
-                .addGap(6, 6, 6)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)))
-                .addGap(6, 6, 6)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)))
-                .addGap(32, 32, 32))
-        );
-
-        Unidad1.addTab("CONVERSIONES", PanConver);
+        Unidad1.setBackground(new java.awt.Color(38, 38, 38));
+        Unidad1.setForeground(new java.awt.Color(255, 255, 255));
 
         PanErrores.setBackground(new java.awt.Color(153, 255, 153));
 
@@ -504,11 +316,11 @@ public class Main extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                    .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
@@ -617,7 +429,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(96, 96, 96)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(txtResMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
@@ -679,14 +491,10 @@ public class Main extends javax.swing.JFrame {
             .addGroup(PunFlotanteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                .addGap(31, 31, 31)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
+                .addGap(32, 32, 32)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(58, 58, 58)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPflota, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
@@ -695,29 +503,29 @@ public class Main extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(36, 36, 36)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
-                    .addComponent(txtResSigno, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtResSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
-                    .addComponent(txtResExBin, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
+                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtResExBin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(txtResMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(txtResMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PunFlotanteLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(txtResValDeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(txtResValDeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel21))
                 .addGap(12, 12, 12)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
@@ -811,11 +619,11 @@ public class Main extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 26, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
-                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtValorProX))
+                    .addComponent(cajaTxtValorProX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -930,23 +738,23 @@ public class Main extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BolzanoLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtFuncion))
+                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BolzanoLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtInterA))
+                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BolzanoLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtInterB))
+                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -1052,17 +860,17 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(cajaTxtFB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtBInteA))
+                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaTxtBInteB)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(73, 73, 73)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -1203,25 +1011,26 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(EspMetricosLayout.createSequentialGroup()
                         .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cajaTxt_x1)
-                                    .addComponent(cajaTxt_y1)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(cajaTxt_x1)
+                                        .addComponent(cajaTxt_y1))
                                     .addGroup(EspMetricosLayout.createSequentialGroup()
                                         .addGap(5, 5, 5)
-                                        .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                 .addGap(34, 34, 34)
                                 .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(EspMetricosLayout.createSequentialGroup()
                                 .addGap(51, 51, 51)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(cajaTxt_x2)
+                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(EspMetricosLayout.createSequentialGroup()
                                         .addGap(5, 5, 5)
                                         .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(cajaTxt_y2))))
+                                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(cajaTxt_x2)
+                                        .addComponent(cajaTxt_y2)))))
                         .addGap(53, 53, 53)
                         .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1257,6 +1066,189 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
+        PanConver.setBackground(new java.awt.Color(18, 166, 82));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("INGRESA EL NUMERO:");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("RESULTADOS:");
+
+        labelTxtBinAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelTxtBinAdec.setText("--");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CONVERSIONES");
+
+        BTcalBinAdec.setBackground(new java.awt.Color(38, 38, 38));
+        BTcalBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BTcalBinAdec.setForeground(new java.awt.Color(242, 242, 242));
+        BTcalBinAdec.setText("BINARIO A DECIMAL");
+        BTcalBinAdec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTcalBinAdecActionPerformed(evt);
+            }
+        });
+
+        BTlimpiarBinAdec.setBackground(new java.awt.Color(38, 38, 38));
+        BTlimpiarBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BTlimpiarBinAdec.setForeground(new java.awt.Color(242, 242, 242));
+        BTlimpiarBinAdec.setText("LIMPIAR");
+        BTlimpiarBinAdec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTlimpiarBinAdecActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setText("BINARIO A DECIMAL:");
+
+        BTcalDecAbin.setBackground(new java.awt.Color(38, 38, 38));
+        BTcalDecAbin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BTcalDecAbin.setForeground(new java.awt.Color(242, 242, 242));
+        BTcalDecAbin.setText("DECIMAL A BINARIO");
+        BTcalDecAbin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTcalDecAbinActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setText("DECIMAL A BINARIO:");
+
+        labelTxtDecAbin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelTxtDecAbin.setText("--");
+
+        BTcalOcAdeci.setBackground(new java.awt.Color(38, 38, 38));
+        BTcalOcAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BTcalOcAdeci.setForeground(new java.awt.Color(242, 242, 242));
+        BTcalOcAdeci.setText("OCTAL A DECIMAL");
+        BTcalOcAdeci.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTcalOcAdeciActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setText("OCTAL A DECIMAL:");
+
+        labelTxtOcAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelTxtOcAdec.setText("--");
+
+        BTcalHexaAdeci.setBackground(new java.awt.Color(38, 38, 38));
+        BTcalHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BTcalHexaAdeci.setForeground(new java.awt.Color(242, 242, 242));
+        BTcalHexaAdeci.setText("HEXADECIMAL A DECIMAL");
+        BTcalHexaAdeci.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTcalHexaAdeciActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("HEXADECIMAL A DECIMAL:");
+
+        labelTxtHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelTxtHexaAdeci.setText("--");
+
+        javax.swing.GroupLayout PanConverLayout = new javax.swing.GroupLayout(PanConver);
+        PanConver.setLayout(PanConverLayout);
+        PanConverLayout.setHorizontalGroup(
+            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanConverLayout.createSequentialGroup()
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(184, 184, 184))
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanConverLayout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(PanConverLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cajaTxtConver)
+                                .addGap(73, 73, 73))))
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(299, 299, 299))
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(240, 240, 240)
+                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(PanConverLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(184, 184, 184))
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(155, 155, 155)))
+                .addGap(128, 128, 128))
+        );
+        PanConverLayout.setVerticalGroup(
+            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanConverLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanConverLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(cajaTxtConver, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addGap(7, 7, 7)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(7, 7, 7)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(7, 7, 7)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(7, 7, 7)
+                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
+        );
+
+        Unidad1.addTab("CONVERSIONES", PanConver);
+
         Unidades.addTab("UNIDAD 1", Unidad1);
 
         javax.swing.GroupLayout Unidad2Layout = new javax.swing.GroupLayout(Unidad2);
@@ -1280,11 +1272,12 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(Unidades))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
