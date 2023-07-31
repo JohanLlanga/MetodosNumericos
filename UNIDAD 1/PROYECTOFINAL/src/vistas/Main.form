@@ -32,8 +32,8 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="709" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -51,34 +51,29 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel2" max="32767" attributes="0"/>
-                      <Component id="Unidades" alignment="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="Unidades" max="32767" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="399" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
+                  <Component id="TituloPrincipal" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel1" min="-2" pref="61" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Unidades" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="TituloPrincipal" max="32767" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Component id="Unidades" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="TituloPrincipal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="30" style="1"/>
@@ -87,26 +82,6 @@
             <Property name="text" type="java.lang.String" value="METODOS N&#xda;MERICOS"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel2">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="ff" red="cc" type="rgb"/>
-            </Property>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
         <Container class="javax.swing.JTabbedPane" name="Unidades">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -155,65 +130,74 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel44" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                              <Component id="BotonConver" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Component id="LimpiarConver" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
+                                      <Component id="jLabel44" max="32767" attributes="0"/>
+                                      <EmptySpace min="116" pref="116" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="BotonConver" pref="250" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="LimpiarConver" pref="250" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel43" max="32767" attributes="0"/>
+                                                  <Component id="jLabel46" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="labelTxtResConv" alignment="0" pref="172" max="32767" attributes="0"/>
+                                                  <Component id="cajaTxt_CW" alignment="0" pref="172" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="ComboBox_CT" alignment="0" pref="141" max="32767" attributes="0"/>
+                                                  <Component id="ComboBox_CW" alignment="0" pref="141" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel43" alignment="0" pref="228" max="32767" attributes="0"/>
-                                  <Component id="jLabel46" alignment="0" pref="228" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cajaTxt_CW" alignment="0" pref="245" max="32767" attributes="0"/>
-                                  <Component id="labelTxtResConv" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ComboBox_CW" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="ComboBox_CT" alignment="0" pref="126" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="BotonPDFConver" min="-2" pref="250" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="257" max="-2" attributes="0"/>
+                              <Component id="BotonPDFConver" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="259" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel44" pref="67" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jLabel44" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel43" alignment="3" pref="30" max="32767" attributes="0"/>
                                   <Component id="cajaTxt_CW" alignment="3" pref="30" max="32767" attributes="0"/>
                                   <Component id="ComboBox_CW" alignment="3" pref="30" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel46" alignment="3" max="32767" attributes="0"/>
-                                      <Component id="labelTxtResConv" alignment="3" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="ComboBox_CT" alignment="0" pref="30" max="32767" attributes="0"/>
+                                  <Component id="ComboBox_CT" pref="30" max="32767" attributes="0"/>
+                                  <Component id="jLabel46" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="labelTxtResConv" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="LimpiarConver" alignment="3" pref="50" max="32767" attributes="0"/>
                                   <Component id="BotonConver" alignment="3" pref="50" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="BotonPDFConver" pref="50" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -224,6 +208,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="12" style="1"/>
                         </Property>
+                        <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" value="INGRESE EL NUMERO A CONVERTIR:"/>
                       </Properties>
                     </Component>
@@ -278,6 +263,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="12" style="1"/>
                         </Property>
+                        <Property name="horizontalAlignment" type="int" value="4"/>
                         <Property name="text" type="java.lang.String" value="EL NUMERO A CONVERTIDO ES :"/>
                       </Properties>
                     </Component>
@@ -320,9 +306,6 @@
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f0" green="df" red="92" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="--"/>
@@ -372,20 +355,20 @@
                                               <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                                               <Component id="btErrAbs" max="32767" attributes="0"/>
                                               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                              <Component id="btErrRe" pref="139" max="32767" attributes="0"/>
+                                              <Component id="btErrRe" pref="177" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jLabel5" pref="89" max="32767" attributes="0"/>
+                                                      <Component id="jLabel5" pref="109" max="32767" attributes="0"/>
                                                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="cajaTxtErrN2" pref="192" max="32767" attributes="0"/>
+                                                      <Component id="cajaTxtErrN2" pref="211" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jLabel11" pref="89" max="32767" attributes="0"/>
+                                                      <Component id="jLabel11" pref="109" max="32767" attributes="0"/>
                                                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="cajaTxtErrN1" pref="192" max="32767" attributes="0"/>
+                                                      <Component id="cajaTxtErrN1" pref="211" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
@@ -397,15 +380,15 @@
                                       <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel13" pref="145" max="32767" attributes="0"/>
+                                              <Component id="jLabel13" pref="164" max="32767" attributes="0"/>
                                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtResEa" pref="117" max="32767" attributes="0"/>
+                                              <Component id="txtResEa" pref="137" max="32767" attributes="0"/>
                                               <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel14" pref="145" max="32767" attributes="0"/>
+                                              <Component id="jLabel14" pref="165" max="32767" attributes="0"/>
                                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtResEr" pref="266" max="32767" attributes="0"/>
+                                              <Component id="txtResEr" pref="285" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -414,15 +397,15 @@
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                                              <Component id="btLimErr" pref="139" max="32767" attributes="0"/>
+                                              <Component id="btLimErr" pref="178" max="32767" attributes="0"/>
                                           </Group>
-                                          <Component id="jLabel12" pref="144" max="32767" attributes="0"/>
+                                          <Component id="jLabel12" pref="183" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" pref="155" max="32767" attributes="0"/>
+                                      <Component id="jLabel3" pref="194" max="32767" attributes="0"/>
                                       <EmptySpace min="133" pref="133" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -434,7 +417,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="jLabel3" pref="64" max="32767" attributes="0"/>
+                              <Component id="jLabel3" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -454,14 +437,14 @@
                                   <Component id="btErrRe" alignment="3" pref="38" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="btLimErr" pref="61" max="32767" attributes="0"/>
+                              <Component id="btLimErr" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jLabel12" pref="61" max="32767" attributes="0"/>
+                              <Component id="jLabel12" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel13" pref="60" max="32767" attributes="0"/>
+                                  <Component id="jLabel13" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtResEa" pref="51" max="32767" attributes="0"/>
+                                      <Component id="txtResEa" max="32767" attributes="0"/>
                                       <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -690,11 +673,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" pref="74" max="32767" attributes="0"/>
+                              <Component id="jLabel15" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel16" alignment="0" pref="59" max="32767" attributes="0"/>
-                                  <Component id="cajaTxtPfijoYflota" alignment="0" pref="59" max="32767" attributes="0"/>
+                                  <Component id="jLabel16" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cajaTxtPfijoYflota" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -738,7 +721,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtPfloatBin" pref="57" max="32767" attributes="0"/>
+                                  <Component id="txtPfloatBin" max="32767" attributes="0"/>
                                   <Component id="txtResPfloatBin" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -939,7 +922,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
-                                      <Component id="jLabel22" pref="351" max="32767" attributes="0"/>
+                                      <Component id="jLabel22" pref="390" max="32767" attributes="0"/>
                                       <EmptySpace min="127" pref="127" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -951,19 +934,19 @@
                                       <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="cajaTxtValorProX" max="32767" attributes="0"/>
-                                          <Component id="cajaTxtNumIterPro" pref="90" max="32767" attributes="0"/>
+                                          <Component id="cajaTxtNumIterPro" pref="129" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="617" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" pref="656" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                                      <Component id="btCalcularProErro" pref="140" max="32767" attributes="0"/>
+                                      <Component id="btCalcularProErro" pref="159" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                      <Component id="btLimpiarProErro" pref="140" max="32767" attributes="0"/>
+                                      <Component id="btLimpiarProErro" pref="160" max="32767" attributes="0"/>
                                       <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -975,7 +958,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              <Component id="jLabel22" pref="57" max="32767" attributes="0"/>
+                              <Component id="jLabel22" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -987,10 +970,10 @@
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel24" max="32767" attributes="0"/>
-                                  <Component id="cajaTxtNumIterPro" pref="56" max="32767" attributes="0"/>
+                                  <Component id="cajaTxtNumIterPro" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="281" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="266" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btCalcularProErro" alignment="3" pref="41" max="32767" attributes="0"/>
@@ -1190,8 +1173,8 @@
                               </Group>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel34" pref="133" max="32767" attributes="0"/>
-                                  <Component id="FuncionXD" pref="133" max="32767" attributes="0"/>
+                                  <Component id="jLabel34" max="32767" attributes="0"/>
+                                  <Component id="FuncionXD" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                           </Group>
@@ -1782,39 +1765,28 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="711" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="750" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="641" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="563" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="Unidad2">
+            <Container class="javax.swing.JTabbedPane" name="Unidad2">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="UNIIDAD 2">
-                    <Property name="tabTitle" type="java.lang.String" value="UNIIDAD 2"/>
+                  <JTabbedPaneConstraints tabName="UNIDAD 2">
+                    <Property name="tabTitle" type="java.lang.String" value="UNIDAD 2"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="711" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="702" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
             </Container>
           </SubComponents>
         </Container>
