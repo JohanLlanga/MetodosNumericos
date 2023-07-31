@@ -175,10 +175,12 @@ public class Main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(2, 115, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloPrincipal.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         TituloPrincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloPrincipal.setText("METODOS NÚMERICOS");
+        jPanel1.add(TituloPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 0, 444, 62));
 
         Unidades.setBackground(new java.awt.Color(38, 38, 38));
         Unidades.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,14 +189,17 @@ public class Main extends javax.swing.JFrame {
         Unidad1.setForeground(new java.awt.Color(255, 255, 255));
 
         Conversiones.setBackground(new java.awt.Color(18, 166, 82));
+        Conversiones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel43.setText("INGRESE EL NUMERO A CONVERTIR:");
+        Conversiones.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 176, -1, 30));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("CONVERSIONES");
+        Conversiones.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 344, 104));
 
         ComboBox_CW.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Decimal", "Binario", "Hexadecimal", "Octal" }));
         ComboBox_CW.addActionListener(new java.awt.event.ActionListener() {
@@ -202,8 +207,10 @@ public class Main extends javax.swing.JFrame {
                 ComboBox_CWActionPerformed(evt);
             }
         });
+        Conversiones.add(ComboBox_CW, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 176, 160, 30));
+        Conversiones.add(cajaTxt_CW, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 176, 187, 30));
 
-        BotonConver.setBackground(new java.awt.Color(0, 0, 0));
+        BotonConver.setBackground(new java.awt.Color(38, 38, 38));
         BotonConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         BotonConver.setForeground(new java.awt.Color(255, 255, 255));
         BotonConver.setText("CONVERTIR");
@@ -212,10 +219,12 @@ public class Main extends javax.swing.JFrame {
                 BotonConverActionPerformed(evt);
             }
         });
+        Conversiones.add(BotonConver, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 306, 267, 50));
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel46.setText("EL NUMERO A CONVERTIDO ES :");
+        Conversiones.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 232, 217, 46));
 
         ComboBox_CT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Decimal", "Binario", "Hexadecimal", "Octal" }));
         ComboBox_CT.addActionListener(new java.awt.event.ActionListener() {
@@ -223,8 +232,9 @@ public class Main extends javax.swing.JFrame {
                 ComboBox_CTActionPerformed(evt);
             }
         });
+        Conversiones.add(ComboBox_CT, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 232, 160, 46));
 
-        LimpiarConver.setBackground(new java.awt.Color(0, 0, 0));
+        LimpiarConver.setBackground(new java.awt.Color(38, 38, 38));
         LimpiarConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LimpiarConver.setForeground(new java.awt.Color(255, 255, 255));
         LimpiarConver.setText("LIMPIAR");
@@ -233,12 +243,14 @@ public class Main extends javax.swing.JFrame {
                 LimpiarConverActionPerformed(evt);
             }
         });
+        Conversiones.add(LimpiarConver, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 306, 267, 50));
 
         labelTxtResConv.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         labelTxtResConv.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelTxtResConv.setText("--");
+        Conversiones.add(labelTxtResConv, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 232, 187, 46));
 
-        BotonPDFConver.setBackground(new java.awt.Color(0, 0, 0));
+        BotonPDFConver.setBackground(new java.awt.Color(38, 38, 38));
         BotonPDFConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         BotonPDFConver.setForeground(new java.awt.Color(255, 255, 255));
         BotonPDFConver.setText("PDF");
@@ -247,415 +259,202 @@ public class Main extends javax.swing.JFrame {
                 BotonPDFConverActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ConversionesLayout = new javax.swing.GroupLayout(Conversiones);
-        Conversiones.setLayout(ConversionesLayout);
-        ConversionesLayout.setHorizontalGroup(
-            ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConversionesLayout.createSequentialGroup()
-                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ConversionesLayout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(116, 116, 116))
-                    .addGroup(ConversionesLayout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(ConversionesLayout.createSequentialGroup()
-                                .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                                .addGap(42, 42, 42)
-                                .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
-                            .addGroup(ConversionesLayout.createSequentialGroup()
-                                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ComboBox_CT, 0, 160, Short.MAX_VALUE)
-                                    .addComponent(ComboBox_CW, 0, 160, Short.MAX_VALUE))))))
-                .addGap(104, 104, 104))
-            .addGroup(ConversionesLayout.createSequentialGroup()
-                .addGap(257, 257, 257)
-                .addComponent(BotonPDFConver, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(259, 259, 259))
-        );
-        ConversionesLayout.setVerticalGroup(
-            ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ConversionesLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                .addGap(44, 44, 44)
-                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(ComboBox_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-                .addGap(26, 26, 26)
-                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ComboBox_CT, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
-                .addComponent(BotonPDFConver, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(261, 261, 261))
-        );
+        Conversiones.add(BotonPDFConver, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 388, 268, 50));
 
         Unidad1.addTab("CONVERSIONES", Conversiones);
 
-        PanErrores.setBackground(new java.awt.Color(153, 255, 153));
+        PanErrores.setBackground(new java.awt.Color(18, 166, 82));
+        PanErrores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("ERRORES");
+        PanErrores.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 228, 69));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("NUMERO 2:");
+        PanErrores.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 178, 126, 32));
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("NUMERO 1:");
+        PanErrores.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 96, 126, 72));
+        PanErrores.add(cajaTxtErrN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, 228, 33));
+        PanErrores.add(cajaTxtErrN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 228, 32));
 
-        btErrAbs.setBackground(new java.awt.Color(153, 255, 204));
-        btErrAbs.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btErrAbs.setBackground(new java.awt.Color(38, 38, 38));
+        btErrAbs.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btErrAbs.setForeground(new java.awt.Color(255, 255, 255));
         btErrAbs.setText("ERROR ABSOLUTO");
         btErrAbs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btErrAbsActionPerformed(evt);
             }
         });
+        PanErrores.add(btErrAbs, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 266, -1, 38));
 
-        btErrRe.setBackground(new java.awt.Color(153, 255, 204));
-        btErrRe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btErrRe.setBackground(new java.awt.Color(38, 38, 38));
+        btErrRe.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btErrRe.setForeground(new java.awt.Color(255, 255, 255));
         btErrRe.setText("ERROR RELATIVO");
         btErrRe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btErrReActionPerformed(evt);
             }
         });
+        PanErrores.add(btErrRe, new org.netbeans.lib.awtextra.AbsoluteConstraints(385, 266, 192, 38));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("RESULTADOS:");
+        PanErrores.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 404, 217, 62));
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("ERROR ABSOLUTO:");
+        PanErrores.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 478, 181, 70));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("ERROR RELATIVO:");
+        PanErrores.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 548, 182, 36));
 
         txtResEa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtResEa.setText("--");
+        PanErrores.add(txtResEa, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 478, 154, 61));
 
         txtResEr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtResEr.setText("--");
+        PanErrores.add(txtResEr, new org.netbeans.lib.awtextra.AbsoluteConstraints(309, 548, 302, 36));
 
-        btLimErr.setBackground(new java.awt.Color(153, 255, 204));
-        btLimErr.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btLimErr.setBackground(new java.awt.Color(38, 38, 38));
+        btLimErr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimErr.setForeground(new java.awt.Color(255, 255, 255));
         btLimErr.setText("LIMPIAR");
         btLimErr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btLimErrActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PanErroresLayout = new javax.swing.GroupLayout(PanErrores);
-        PanErrores.setLayout(PanErroresLayout);
-        PanErroresLayout.setHorizontalGroup(
-            PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanErroresLayout.createSequentialGroup()
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanErroresLayout.createSequentialGroup()
-                                .addGap(178, 178, 178)
-                                .addComponent(btErrAbs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(45, 45, 45)
-                                .addComponent(btErrRe, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
-                            .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addGap(191, 191, 191)
-                                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PanErroresLayout.createSequentialGroup()
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cajaTxtErrN2, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
-                                    .addGroup(PanErroresLayout.createSequentialGroup()
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
-                                .addGap(14, 14, 14)))
-                        .addGap(34, 34, 34))
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
-                                .addGap(149, 149, 149))
-                            .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResEr, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE))))
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGap(261, 261, 261)
-                        .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE))
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
-                        .addGap(133, 133, 133))
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                        .addGap(133, 133, 133)))
-                .addGap(173, 173, 173))
-        );
-        PanErroresLayout.setVerticalGroup(
-            PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanErroresLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(cajaTxtErrN2, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addGap(56, 56, 56)
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btErrAbs, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btErrRe, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(9, 9, 9)))
-                .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                    .addComponent(txtResEr, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
-                .addGap(115, 115, 115))
-        );
+        PanErrores.add(btLimErr, new org.netbeans.lib.awtextra.AbsoluteConstraints(266, 322, 212, 64));
 
         Unidad1.addTab("ERRORES", PanErrores);
 
-        PunFlotante.setBackground(new java.awt.Color(255, 204, 204));
+        PunFlotante.setBackground(new java.awt.Color(18, 166, 82));
+        PunFlotante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel15.setText("PUNTO FIJO Y FLOTANTE");
+        PunFlotante.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 310, 51));
+        PunFlotante.add(cajaTxtPfijoYflota, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, 182, 44));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel16.setText("Ingresa el valor:");
+        PunFlotante.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 140, 44));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel17.setText("RESPUESTAS:");
+        PunFlotante.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 173, 44));
 
-        btPflota.setBackground(new java.awt.Color(255, 102, 102));
-        btPflota.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btPflota.setBackground(new java.awt.Color(38, 38, 38));
+        btPflota.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPflota.setForeground(new java.awt.Color(255, 255, 255));
         btPflota.setText("CALCULAR");
         btPflota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPflotaActionPerformed(evt);
             }
         });
+        PunFlotante.add(btPflota, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 191, 183, 43));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel18.setText("SIGNO:");
+        PunFlotante.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 80, 50));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setText("EXPONENTE (BINARIO):");
+        PunFlotante.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 200, 50));
 
         txtResSigno.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResSigno.setText("--");
+        PunFlotante.add(txtResSigno, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 202, 29));
 
         txtResExBin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResExBin.setText("--");
+        PunFlotante.add(txtResExBin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 399, 250, 40));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel20.setText("MANTIZA (BINARIO):");
+        PunFlotante.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, 190, 40));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel21.setText("VALOR DECIMAL:");
+        PunFlotante.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 520, 150, 30));
 
         txtResMan.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResMan.setText("--");
+        PunFlotante.add(txtResMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 340, 44));
 
         txtResValDeci.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResValDeci.setText("--");
+        PunFlotante.add(txtResValDeci, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, 207, 44));
 
         txtPfloatBin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPfloatBin.setText("VALOR BINARIO:");
+        PunFlotante.add(txtPfloatBin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, 140, 50));
 
         txtPfloatHexa.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPfloatHexa.setText("VALOR HEXADECIMAL:");
+        PunFlotante.add(txtPfloatHexa, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 620, 180, 28));
 
         txtResPfloatBin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResPfloatBin.setText("--");
+        PunFlotante.add(txtResPfloatBin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 560, 202, 50));
 
         txtResPfloatHexa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         txtResPfloatHexa.setText("--");
+        PunFlotante.add(txtResPfloatHexa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 610, 202, 40));
 
-        btLimPuntoFloat.setBackground(new java.awt.Color(255, 102, 102));
-        btLimPuntoFloat.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btLimPuntoFloat.setBackground(new java.awt.Color(38, 38, 38));
+        btLimPuntoFloat.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimPuntoFloat.setForeground(new java.awt.Color(255, 255, 255));
         btLimPuntoFloat.setText("LIMPIAR");
         btLimPuntoFloat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btLimPuntoFloatActionPerformed(evt);
             }
         });
+        PunFlotante.add(btLimPuntoFloat, new org.netbeans.lib.awtextra.AbsoluteConstraints(539, 191, 170, 43));
 
-        GenPDFPuntoFyF.setBackground(new java.awt.Color(255, 102, 102));
-        GenPDFPuntoFyF.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        GenPDFPuntoFyF.setBackground(new java.awt.Color(38, 38, 38));
+        GenPDFPuntoFyF.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        GenPDFPuntoFyF.setForeground(new java.awt.Color(255, 255, 255));
         GenPDFPuntoFyF.setText("PDF");
         GenPDFPuntoFyF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GenPDFPuntoFyFActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PunFlotanteLayout = new javax.swing.GroupLayout(PunFlotante);
-        PunFlotante.setLayout(PunFlotanteLayout);
-        PunFlotanteLayout.setHorizontalGroup(
-            PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtResMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(txtPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtResPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(28, 28, 28))
-                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                        .addGap(61, 61, 61)
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(txtResSigno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(14, 14, 14)))
-                                .addGap(220, 220, 220))
-                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(jLabel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtResValDeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(17, 17, 17))
-                            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtResExBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(139, 139, 139)))
-                        .addGap(131, 131, 131))))
-            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(btPflota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(63, 63, 63)
-                .addComponent(GenPDFPuntoFyF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(68, 68, 68)
-                .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(75, 75, 75))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PunFlotanteLayout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(32, 32, 32)
-                        .addComponent(cajaTxtPfijoYflota)))
-                .addGap(185, 185, 185))
-        );
-        PunFlotanteLayout.setVerticalGroup(
-            PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PunFlotanteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(32, 32, 32)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cajaTxtPfijoYflota))
-                .addGap(58, 58, 58)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btPflota, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(btLimPuntoFloat, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(GenPDFPuntoFyF, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                .addGap(36, 36, 36)
-                .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(36, 36, 36)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(txtResSigno, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(txtResExBin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(txtResMan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel20))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PunFlotanteLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(txtResValDeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel21))
-                .addGap(12, 12, 12)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtResPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(txtResPfloatHexa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33))
-        );
+        PunFlotante.add(GenPDFPuntoFyF, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 191, 149, 43));
 
         Unidad1.addTab("PUNTO FLOTANTE", PunFlotante);
 
-        PropaErrores.setBackground(new java.awt.Color(204, 204, 255));
+        PropaErrores.setBackground(new java.awt.Color(18, 166, 82));
+        PropaErrores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel22.setText("PROPAGACION DE ERRORES");
+        PropaErrores.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 350, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel23.setText("Ingresa el valor de \"X\":");
+        PropaErrores.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 86, 231, 20));
+        PropaErrores.add(cajaTxtValorProX, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 72, 163, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setText("Ingresa el numero de iteraciones:");
+        PropaErrores.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 124, -1, 22));
+        PropaErrores.add(cajaTxtNumIterPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 124, 163, -1));
 
+        tableProErro.setBackground(new java.awt.Color(38, 38, 38));
+        tableProErro.setForeground(new java.awt.Color(255, 255, 255));
         tableProErro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -674,350 +473,191 @@ public class Main extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableProErro);
 
+        PropaErrores.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 164, 690, 399));
+
+        btCalcularProErro.setBackground(new java.awt.Color(38, 38, 38));
+        btCalcularProErro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btCalcularProErro.setForeground(new java.awt.Color(255, 255, 255));
         btCalcularProErro.setText("CALCULAR");
         btCalcularProErro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCalcularProErroActionPerformed(evt);
             }
         });
+        PropaErrores.add(btCalcularProErro, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 593, 171, 41));
 
+        btLimpiarProErro.setBackground(new java.awt.Color(38, 38, 38));
+        btLimpiarProErro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimpiarProErro.setForeground(new java.awt.Color(255, 255, 255));
         btLimpiarProErro.setText("LIMPIAR");
         btLimpiarProErro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btLimpiarProErroActionPerformed(evt);
             }
         });
+        PropaErrores.add(btLimpiarProErro, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 593, 171, 41));
 
+        btPDF_PE.setBackground(new java.awt.Color(38, 38, 38));
+        btPDF_PE.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_PE.setForeground(new java.awt.Color(255, 255, 255));
         btPDF_PE.setText("PDF");
         btPDF_PE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPDF_PEActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PropaErroresLayout = new javax.swing.GroupLayout(PropaErrores);
-        PropaErrores.setLayout(PropaErroresLayout);
-        PropaErroresLayout.setHorizontalGroup(
-            PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PropaErroresLayout.createSequentialGroup()
-                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PropaErroresLayout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
-                        .addGap(127, 127, 127))
-                    .addGroup(PropaErroresLayout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cajaTxtValorProX)
-                            .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
-                        .addGap(155, 155, 155))
-                    .addGroup(PropaErroresLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
-                    .addGroup(PropaErroresLayout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
-                        .addGap(41, 41, 41)
-                        .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
-                        .addGap(32, 32, 32)
-                        .addComponent(btPDF_PE, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
-                        .addGap(16, 16, 16)))
-                .addGap(69, 69, 69))
-        );
-        PropaErroresLayout.setVerticalGroup(
-            PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PropaErroresLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(26, 26, 26)
-                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PropaErroresLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtValorProX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cajaTxtNumIterPro))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
-                .addGap(30, 30, 30)
-                .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                    .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                    .addComponent(btPDF_PE, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
-                .addGap(65, 65, 65))
-        );
+        PropaErrores.add(btPDF_PE, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 593, 171, 41));
 
         Unidad1.addTab("PROPAGACION ERRORES", PropaErrores);
 
-        Bolzano.setBackground(new java.awt.Color(204, 255, 204));
+        Bolzano.setBackground(new java.awt.Color(18, 166, 82));
+        Bolzano.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel25.setText("Ingrese el extremo izquierdo del intervalo:");
+        Bolzano.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 216, 381, -1));
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel26.setText("Ingrese el extremo derecho del intervalo:");
+        Bolzano.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 269, 362, -1));
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel27.setText("METODO DE BOLZANO");
+        Bolzano.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 270, 82));
 
         jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel28.setText("Ingrese la función (utilice 'x' como variable):");
+        Bolzano.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 166, 381, -1));
 
         FuncionXD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         FuncionXD.setText("--");
+        Bolzano.add(FuncionXD, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 511, 243, 75));
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel34.setText("La aproximación de la solución es:");
+        Bolzano.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 511, -1, 75));
+        Bolzano.add(cajaTxtInterB, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 263, 142, 30));
 
         cajaTxtInterA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTxtInterAActionPerformed(evt);
             }
         });
+        Bolzano.add(cajaTxtInterA, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 143, 30));
 
         cajaTxtFuncion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTxtFuncionActionPerformed(evt);
             }
         });
+        Bolzano.add(cajaTxtFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 143, 30));
 
-        M_Bolzano.setBackground(new java.awt.Color(0, 204, 204));
+        M_Bolzano.setBackground(new java.awt.Color(38, 38, 38));
         M_Bolzano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        M_Bolzano.setForeground(new java.awt.Color(255, 255, 255));
         M_Bolzano.setText("INGRESAR DATOS");
         M_Bolzano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 M_BolzanoActionPerformed(evt);
             }
         });
+        Bolzano.add(M_Bolzano, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 410, 225, 50));
 
-        LimpiarMBolza.setBackground(new java.awt.Color(0, 204, 204));
+        LimpiarMBolza.setBackground(new java.awt.Color(38, 38, 38));
         LimpiarMBolza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LimpiarMBolza.setForeground(new java.awt.Color(255, 255, 255));
         LimpiarMBolza.setText("LIMPIAR");
         LimpiarMBolza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LimpiarMBolzaActionPerformed(evt);
             }
         });
+        Bolzano.add(LimpiarMBolza, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 410, 160, 50));
 
-        btPDF_Bolzano.setBackground(new java.awt.Color(0, 204, 204));
+        btPDF_Bolzano.setBackground(new java.awt.Color(38, 38, 38));
         btPDF_Bolzano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_Bolzano.setForeground(new java.awt.Color(255, 255, 255));
         btPDF_Bolzano.setText("PDF");
         btPDF_Bolzano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPDF_BolzanoActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout BolzanoLayout = new javax.swing.GroupLayout(Bolzano);
-        Bolzano.setLayout(BolzanoLayout);
-        BolzanoLayout.setHorizontalGroup(
-            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BolzanoLayout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
-                .addGap(244, 244, 244))
-            .addGroup(BolzanoLayout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(38, 38, 38)
-                .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(140, 140, 140))
-            .addGroup(BolzanoLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addGap(28, 28, 28)
-                        .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btPDF_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addGap(75, 75, 75))
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(BolzanoLayout.createSequentialGroup()
-                                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(19, 19, 19))
-                            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BolzanoLayout.createSequentialGroup()
-                                .addComponent(cajaTxtInterB)
-                                .addGap(1, 1, 1))
-                            .addComponent(cajaTxtInterA, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(201, 201, 201))))
-        );
-        BolzanoLayout.setVerticalGroup(
-            BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BolzanoLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                .addGap(64, 64, 64)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(20, 20, 20)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(23, 23, 23)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(btPDF_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
-                .addGap(51, 51, 51)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(113, 113, 113))
-        );
+        Bolzano.add(btPDF_Bolzano, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 410, 225, 50));
 
         Unidad1.addTab("BOLZANO", Bolzano);
 
-        Biseccion.setBackground(new java.awt.Color(153, 255, 204));
+        Biseccion.setBackground(new java.awt.Color(18, 166, 82));
+        Biseccion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel36.setText("Ingrese la función:");
+        Biseccion.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 160, 63));
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel29.setText("Ingrese el límite inferior del intervalo (a):");
+        Biseccion.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 290, 50));
 
         jLabel30.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel30.setText("Ingrese el límite superior del intervalo (b):");
+        Biseccion.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 310, 62));
+        Biseccion.add(cajaTxtFB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 129, 60));
+        Biseccion.add(cajaTxtBInteA, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 129, 40));
+        Biseccion.add(cajaTxtBInteB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 129, 40));
 
-        M_Biseccion.setBackground(new java.awt.Color(102, 204, 255));
+        M_Biseccion.setBackground(new java.awt.Color(38, 38, 38));
         M_Biseccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        M_Biseccion.setForeground(new java.awt.Color(255, 255, 255));
         M_Biseccion.setText("CALCULAR");
         M_Biseccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 M_BiseccionActionPerformed(evt);
             }
         });
+        Biseccion.add(M_Biseccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 166, 50));
 
-        Limpiar_MBisec.setBackground(new java.awt.Color(102, 204, 255));
+        Limpiar_MBisec.setBackground(new java.awt.Color(38, 38, 38));
         Limpiar_MBisec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Limpiar_MBisec.setForeground(new java.awt.Color(255, 255, 255));
         Limpiar_MBisec.setText("LIMPIAR");
         Limpiar_MBisec.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Limpiar_MBisecActionPerformed(evt);
             }
         });
+        Biseccion.add(Limpiar_MBisec, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 165, 50));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel31.setText("La raíz se encuentra en x = ");
+        Biseccion.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 535, 225, -1));
 
         RespuestaMB.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         RespuestaMB.setText("Respuesta");
+        Biseccion.add(RespuestaMB, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 535, 109, -1));
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel33.setText("METODO BISECCION");
+        Biseccion.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 260, 70));
 
-        btPDF_Biseccion.setBackground(new java.awt.Color(102, 204, 255));
+        btPDF_Biseccion.setBackground(new java.awt.Color(38, 38, 38));
         btPDF_Biseccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_Biseccion.setForeground(new java.awt.Color(255, 255, 255));
         btPDF_Biseccion.setText("PDF");
         btPDF_Biseccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPDF_BiseccionActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout BiseccionLayout = new javax.swing.GroupLayout(Biseccion);
-        Biseccion.setLayout(BiseccionLayout);
-        BiseccionLayout.setHorizontalGroup(
-            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BiseccionLayout.createSequentialGroup()
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(44, 44, 44)
-                        .addComponent(RespuestaMB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(2, 2, 2)))
-                .addGap(273, 273, 273))
-            .addGroup(BiseccionLayout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(33, 33, 33)
-                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cajaTxtFB)
-                                    .addComponent(cajaTxtBInteA)
-                                    .addComponent(cajaTxtBInteB)))
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                                .addGap(312, 312, 312))
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(162, 162, 162)))
-                        .addGap(193, 193, 193))
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addComponent(M_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(btPDF_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86))))
-        );
-        BiseccionLayout.setVerticalGroup(
-            BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BiseccionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                .addGap(42, 42, 42)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
-                    .addComponent(cajaTxtFB))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
-                    .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE))
-                    .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(M_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(btPDF_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(1, 1, 1)))
-                .addGap(58, 58, 58)
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RespuestaMB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(147, 147, 147))
-        );
+        Biseccion.add(btPDF_Biseccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 171, 50));
 
         Unidad1.addTab("BISECCION", Biseccion);
 
-        EspMetricos.setBackground(new java.awt.Color(255, 255, 204));
+        EspMetricos.setBackground(new java.awt.Color(18, 166, 82));
+        EspMetricos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel32.setText("ESPACIOS METRICOS");
+        EspMetricos.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 290, 70));
 
         cajaTxt_x1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cajaTxt_x1.addActionListener(new java.awt.event.ActionListener() {
@@ -1025,10 +665,13 @@ public class Main extends javax.swing.JFrame {
                 cajaTxt_x1ActionPerformed(evt);
             }
         });
+        EspMetricos.add(cajaTxt_x1, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 141, 101, 50));
 
         cajaTxt_y1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EspMetricos.add(cajaTxt_y1, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 245, 105, 53));
 
         cajaTxt_x2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        EspMetricos.add(cajaTxt_x2, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 245, 91, 52));
 
         cajaTxt_y2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cajaTxt_y2.addActionListener(new java.awt.event.ActionListener() {
@@ -1036,178 +679,88 @@ public class Main extends javax.swing.JFrame {
                 cajaTxt_y2ActionPerformed(evt);
             }
         });
+        EspMetricos.add(cajaTxt_y2, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 141, 101, 51));
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel35.setText("Ingrese las coordenadas del primer punto:  (");
+        EspMetricos.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 140, 309, 50));
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setText(";");
+        EspMetricos.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(507, 140, 41, 50));
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText(")");
+        EspMetricos.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(673, 140, 43, 50));
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel39.setText("Ingrese las coordenadas del segundo punto: (");
+        EspMetricos.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 245, 345, 50));
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText(";");
+        EspMetricos.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 245, 65, 50));
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText(")");
+        EspMetricos.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(673, 244, 48, 52));
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel42.setText("La distancia entre los dos puntos es:");
+        EspMetricos.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 447, 412, 50));
+        jLabel42.getAccessibleContext().setAccessibleName("");
 
         Respuesta_Esp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Respuesta_Esp.setText("--");
+        EspMetricos.add(Respuesta_Esp, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 447, 134, 50));
+        Respuesta_Esp.getAccessibleContext().setAccessibleName("");
 
+        CalcularEsMetricos.setBackground(new java.awt.Color(38, 38, 38));
+        CalcularEsMetricos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        CalcularEsMetricos.setForeground(new java.awt.Color(255, 255, 255));
         CalcularEsMetricos.setText("CALCULAR");
         CalcularEsMetricos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CalcularEsMetricosActionPerformed(evt);
             }
         });
+        EspMetricos.add(CalcularEsMetricos, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 352, 170, 50));
 
+        Limpiar_Espacios.setBackground(new java.awt.Color(38, 38, 38));
+        Limpiar_Espacios.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Limpiar_Espacios.setForeground(new java.awt.Color(255, 255, 255));
         Limpiar_Espacios.setText("LIMPIAR");
         Limpiar_Espacios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Limpiar_EspaciosActionPerformed(evt);
             }
         });
+        EspMetricos.add(Limpiar_Espacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(309, 352, 170, 50));
 
+        btPDF_EM.setBackground(new java.awt.Color(38, 38, 38));
+        btPDF_EM.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_EM.setForeground(new java.awt.Color(255, 255, 255));
         btPDF_EM.setText("PDF");
         btPDF_EM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPDF_EMActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout EspMetricosLayout = new javax.swing.GroupLayout(EspMetricos);
-        EspMetricos.setLayout(EspMetricosLayout);
-        EspMetricosLayout.setHorizontalGroup(
-            EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EspMetricosLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                        .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btPDF_EM, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(EspMetricosLayout.createSequentialGroup()
-                            .addGap(171, 171, 171)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(EspMetricosLayout.createSequentialGroup()
-                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(EspMetricosLayout.createSequentialGroup()
-                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(32, 32, 32)
-                                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(EspMetricosLayout.createSequentialGroup()
-                                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cajaTxt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(EspMetricosLayout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cajaTxt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(EspMetricosLayout.createSequentialGroup()
-                                    .addGap(22, 22, 22)
-                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(cajaTxt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(EspMetricosLayout.createSequentialGroup()
-                            .addGap(49, 49, 49)
-                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Respuesta_Esp, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 63, Short.MAX_VALUE))
-        );
-        EspMetricosLayout.setVerticalGroup(
-            EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EspMetricosLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cajaTxt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                    .addComponent(cajaTxt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cajaTxt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btPDF_EM, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(Respuesta_Esp, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
-                .addGap(202, 202, 202))
-        );
-
-        jLabel42.getAccessibleContext().setAccessibleName("");
-        Respuesta_Esp.getAccessibleContext().setAccessibleName("");
+        EspMetricos.add(btPDF_EM, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 352, 170, 50));
 
         Unidad1.addTab("ESPACIOS METRICOS", EspMetricos);
 
-        javax.swing.GroupLayout SerieTylorLayout = new javax.swing.GroupLayout(SerieTylor);
-        SerieTylor.setLayout(SerieTylorLayout);
-        SerieTylorLayout.setHorizontalGroup(
-            SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 784, Short.MAX_VALUE)
-        );
-        SerieTylorLayout.setVerticalGroup(
-            SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 699, Short.MAX_VALUE)
-        );
-
+        SerieTylor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
         Unidades.addTab("UNIDAD 1", Unidad1);
         Unidades.addTab("UNIDAD 2", Unidad2);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Unidades)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(TituloPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(176, 176, 176))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(TituloPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Unidades)
-                .addGap(11, 11, 11))
-        );
+        jPanel1.add(Unidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 68, 784, 766));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
