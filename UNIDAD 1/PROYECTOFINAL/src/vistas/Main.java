@@ -125,18 +125,20 @@ public class Main extends javax.swing.JFrame {
         tableProErro = new javax.swing.JTable();
         btCalcularProErro = new javax.swing.JButton();
         btLimpiarProErro = new javax.swing.JButton();
+        btPDF_PE = new javax.swing.JButton();
         Bolzano = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        cajaTxtInterA = new javax.swing.JTextField();
-        cajaTxtInterB = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        M_Bolzano = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
-        cajaTxtFuncion = new javax.swing.JTextField();
         FuncionXD = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
+        cajaTxtInterB = new javax.swing.JTextField();
+        cajaTxtInterA = new javax.swing.JTextField();
+        cajaTxtFuncion = new javax.swing.JTextField();
+        M_Bolzano = new javax.swing.JButton();
         LimpiarMBolza = new javax.swing.JButton();
+        btPDF_Bolzano = new javax.swing.JButton();
         Biseccion = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -149,9 +151,8 @@ public class Main extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         RespuestaMB = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
+        btPDF_Biseccion = new javax.swing.JButton();
         EspMetricos = new javax.swing.JPanel();
-        CalcularEsMetricos = new javax.swing.JButton();
-        Limpiar_Espacios = new javax.swing.JButton();
         jLabel32 = new javax.swing.JLabel();
         cajaTxt_x1 = new javax.swing.JTextField();
         cajaTxt_y1 = new javax.swing.JTextField();
@@ -165,6 +166,9 @@ public class Main extends javax.swing.JFrame {
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         Respuesta_Esp = new javax.swing.JLabel();
+        CalcularEsMetricos = new javax.swing.JButton();
+        Limpiar_Espacios = new javax.swing.JButton();
+        btPDF_EM = new javax.swing.JButton();
         SerieTylor = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JTabbedPane();
 
@@ -258,21 +262,21 @@ public class Main extends javax.swing.JFrame {
                         .addGap(104, 104, 104)
                         .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(ConversionesLayout.createSequentialGroup()
-                                .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
                                 .addGap(42, 42, 42)
-                                .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
+                                .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
                             .addGroup(ConversionesLayout.createSequentialGroup()
                                 .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                    .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ComboBox_CT, 0, 141, Short.MAX_VALUE)
-                                    .addComponent(ComboBox_CW, 0, 141, Short.MAX_VALUE))))))
+                                    .addComponent(ComboBox_CT, 0, 160, Short.MAX_VALUE)
+                                    .addComponent(ComboBox_CW, 0, 160, Short.MAX_VALUE))))))
                 .addGap(104, 104, 104))
             .addGroup(ConversionesLayout.createSequentialGroup()
                 .addGap(257, 257, 257)
@@ -283,7 +287,7 @@ public class Main extends javax.swing.JFrame {
             ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConversionesLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addGap(44, 44, 44)
                 .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
@@ -291,7 +295,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(ComboBox_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
                 .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ComboBox_CT, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(ComboBox_CT, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                     .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(28, 28, 28)
@@ -299,7 +303,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addGap(32, 32, 32)
-                .addComponent(BotonPDFConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addComponent(BotonPDFConver, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                 .addGap(201, 201, 201))
         );
 
@@ -372,43 +376,43 @@ public class Main extends javax.swing.JFrame {
                                 .addGap(178, 178, 178)
                                 .addComponent(btErrAbs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(45, 45, 45)
-                                .addComponent(btErrRe, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
+                                .addComponent(btErrRe, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
                             .addGroup(PanErroresLayout.createSequentialGroup()
                                 .addGap(191, 191, 191)
                                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PanErroresLayout.createSequentialGroup()
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(cajaTxtErrN2, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
+                                        .addComponent(cajaTxtErrN2, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
                                     .addGroup(PanErroresLayout.createSequentialGroup()
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)))
+                                        .addComponent(cajaTxtErrN1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
                                 .addGap(14, 14, 14)))
                         .addGap(34, 34, 34))
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                                .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                                 .addGap(149, 149, 149))
                             .addGroup(PanErroresLayout.createSequentialGroup()
-                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtResEr, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))))
+                                .addComponent(txtResEr, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE))))
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(261, 261, 261)
                         .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(PanErroresLayout.createSequentialGroup()
                                 .addGap(5, 5, 5)
-                                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
+                                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE))
+                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
                         .addGap(133, 133, 133))
                     .addGroup(PanErroresLayout.createSequentialGroup()
                         .addGap(250, 250, 250)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
                         .addGap(133, 133, 133)))
                 .addGap(173, 173, 173))
         );
@@ -639,7 +643,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(33, 33, 33))
         );
 
-        Unidad1.addTab("P.FLOTANTE Y FLOTANTE", PunFlotante);
+        Unidad1.addTab("PUNTO FLOTANTE", PunFlotante);
 
         PropaErrores.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -684,6 +688,13 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btPDF_PE.setText("PDF");
+        btPDF_PE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPDF_PEActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PropaErroresLayout = new javax.swing.GroupLayout(PropaErrores);
         PropaErrores.setLayout(PropaErroresLayout);
         PropaErroresLayout.setHorizontalGroup(
@@ -692,7 +703,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(164, 164, 164)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
                         .addGap(127, 127, 127))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(154, 154, 154)
@@ -702,17 +713,19 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cajaTxtValorProX)
-                            .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                            .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
                         .addGap(155, 155, 155))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE))
                     .addGroup(PropaErroresLayout.createSequentialGroup()
                         .addGap(113, 113, 113)
-                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                        .addGap(94, 94, 94)
-                        .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                        .addGap(155, 155, 155)))
+                        .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                        .addGap(41, 41, 41)
+                        .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                        .addGap(32, 32, 32)
+                        .addComponent(btPDF_PE, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                        .addGap(16, 16, 16)))
                 .addGap(69, 69, 69))
         );
         PropaErroresLayout.setVerticalGroup(
@@ -731,11 +744,12 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cajaTxtNumIterPro))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
-                    .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+                    .addComponent(btLimpiarProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                    .addComponent(btPDF_PE, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
                 .addGap(65, 65, 65))
         );
 
@@ -749,14 +763,29 @@ public class Main extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel26.setText("Ingrese el extremo derecho del intervalo:");
 
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel27.setText("METODO DE BOLZANO");
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel28.setText("Ingrese la función (utilice 'x' como variable):");
+
+        FuncionXD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        FuncionXD.setText("--");
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel34.setText("La aproximación de la solución es:");
+
         cajaTxtInterA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajaTxtInterAActionPerformed(evt);
             }
         });
 
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel27.setText("METODO DE BOLZANO");
+        cajaTxtFuncion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaTxtFuncionActionPerformed(evt);
+            }
+        });
 
         M_Bolzano.setBackground(new java.awt.Color(0, 204, 204));
         M_Bolzano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -767,21 +796,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel28.setText("Ingrese la función (utilice 'x' como variable):");
-
-        cajaTxtFuncion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cajaTxtFuncionActionPerformed(evt);
-            }
-        });
-
-        FuncionXD.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        FuncionXD.setText("--");
-
-        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel34.setText("La aproximación de la solución es:");
-
         LimpiarMBolza.setBackground(new java.awt.Color(0, 204, 204));
         LimpiarMBolza.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         LimpiarMBolza.setText("LIMPIAR");
@@ -791,79 +805,80 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btPDF_Bolzano.setBackground(new java.awt.Color(0, 204, 204));
+        btPDF_Bolzano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_Bolzano.setText("PDF");
+        btPDF_Bolzano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPDF_BolzanoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BolzanoLayout = new javax.swing.GroupLayout(Bolzano);
         Bolzano.setLayout(BolzanoLayout);
         BolzanoLayout.setHorizontalGroup(
             BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BolzanoLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(12, 12, 12))
-                    .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(19, 19, 19)))
-                .addGap(39, 39, 39)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addComponent(cajaTxtInterB)
-                        .addGap(1, 1, 1))
-                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(101, 101, 101))
-            .addGroup(BolzanoLayout.createSequentialGroup()
                 .addGap(199, 199, 199)
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
                 .addGap(244, 244, 244))
             .addGroup(BolzanoLayout.createSequentialGroup()
                 .addGap(131, 131, 131)
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
+                .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(140, 140, 140))
+            .addGroup(BolzanoLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                        .addGap(28, 28, 28)
+                        .addComponent(LimpiarMBolza, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btPDF_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                        .addGap(75, 75, 75))
                     .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(LimpiarMBolza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(8, 8, 8)))
-                .addGap(132, 132, 132))
+                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(BolzanoLayout.createSequentialGroup()
+                                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(19, 19, 19))
+                            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BolzanoLayout.createSequentialGroup()
+                                .addComponent(cajaTxtInterB)
+                                .addGap(1, 1, 1))
+                            .addComponent(cajaTxtInterA, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(201, 201, 201))))
         );
         BolzanoLayout.setVerticalGroup(
             BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BolzanoLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(37, 37, 37)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                .addGap(64, 64, 64)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cajaTxtFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BolzanoLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cajaTxtInterA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cajaTxtInterB, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                    .addComponent(LimpiarMBolza, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btPDF_Bolzano, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addGap(51, 51, 51)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                     .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
         );
@@ -908,35 +923,19 @@ public class Main extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel33.setText("METODO BISECCION");
 
+        btPDF_Biseccion.setBackground(new java.awt.Color(102, 204, 255));
+        btPDF_Biseccion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_Biseccion.setText("PDF");
+        btPDF_Biseccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPDF_BiseccionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout BiseccionLayout = new javax.swing.GroupLayout(Biseccion);
         Biseccion.setLayout(BiseccionLayout);
         BiseccionLayout.setHorizontalGroup(
             BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BiseccionLayout.createSequentialGroup()
-                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(M_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(62, 62, 62)
-                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(BiseccionLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(33, 33, 33)
-                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cajaTxtFB)
-                                    .addComponent(cajaTxtBInteA)
-                                    .addComponent(cajaTxtBInteB)))
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(312, 312, 312))
-                            .addGroup(BiseccionLayout.createSequentialGroup()
-                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(162, 162, 162)))
-                        .addGap(31, 31, 31)))
-                .addGap(162, 162, 162))
             .addGroup(BiseccionLayout.createSequentialGroup()
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
@@ -949,35 +948,64 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(2, 2, 2)))
                 .addGap(273, 273, 273))
+            .addGroup(BiseccionLayout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(33, 33, 33)
+                                .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cajaTxtFB)
+                                    .addComponent(cajaTxtBInteA)
+                                    .addComponent(cajaTxtBInteB)))
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                                .addGap(312, 312, 312))
+                            .addGroup(BiseccionLayout.createSequentialGroup()
+                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(162, 162, 162)))
+                        .addGap(193, 193, 193))
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addComponent(M_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(btPDF_Biseccion, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(86, 86, 86))))
         );
         BiseccionLayout.setVerticalGroup(
             BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BiseccionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
                 .addGap(42, 42, 42)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
                     .addComponent(cajaTxtFB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
                     .addComponent(cajaTxtBInteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BiseccionLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE))
                     .addComponent(cajaTxtBInteB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(73, 73, 73)
+                .addGap(59, 59, 59)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(M_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
-                .addGap(69, 69, 69)
+                    .addComponent(btPDF_Biseccion, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addGroup(BiseccionLayout.createSequentialGroup()
+                        .addComponent(Limpiar_MBisec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(1, 1, 1)))
+                .addGap(58, 58, 58)
                 .addGroup(BiseccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RespuestaMB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -988,24 +1016,15 @@ public class Main extends javax.swing.JFrame {
 
         EspMetricos.setBackground(new java.awt.Color(255, 255, 204));
 
-        CalcularEsMetricos.setText("CALCULAR");
-        CalcularEsMetricos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CalcularEsMetricosActionPerformed(evt);
-            }
-        });
-
-        Limpiar_Espacios.setText("LIMPIAR");
-        Limpiar_Espacios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Limpiar_EspaciosActionPerformed(evt);
-            }
-        });
-
         jLabel32.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel32.setText("ESPACIOS METRICOS");
 
         cajaTxt_x1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cajaTxt_x1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cajaTxt_x1ActionPerformed(evt);
+            }
+        });
 
         cajaTxt_y1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -1022,18 +1041,22 @@ public class Main extends javax.swing.JFrame {
         jLabel35.setText("Ingrese las coordenadas del primer punto:  (");
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setText(";");
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setText(")");
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel39.setText("Ingrese las coordenadas del segundo punto: (");
 
         jLabel40.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText(";");
 
         jLabel41.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setText(")");
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1042,116 +1065,109 @@ public class Main extends javax.swing.JFrame {
         Respuesta_Esp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Respuesta_Esp.setText("--");
 
+        CalcularEsMetricos.setText("CALCULAR");
+        CalcularEsMetricos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalcularEsMetricosActionPerformed(evt);
+            }
+        });
+
+        Limpiar_Espacios.setText("LIMPIAR");
+        Limpiar_Espacios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Limpiar_EspaciosActionPerformed(evt);
+            }
+        });
+
+        btPDF_EM.setText("PDF");
+        btPDF_EM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPDF_EMActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout EspMetricosLayout = new javax.swing.GroupLayout(EspMetricos);
         EspMetricos.setLayout(EspMetricosLayout);
         EspMetricosLayout.setHorizontalGroup(
             EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EspMetricosLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(EspMetricosLayout.createSequentialGroup()
+                        .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btPDF_EM, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(EspMetricosLayout.createSequentialGroup()
+                            .addGap(171, 171, 171)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(EspMetricosLayout.createSequentialGroup()
+                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(EspMetricosLayout.createSequentialGroup()
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(32, 32, 32)
+                                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(EspMetricosLayout.createSequentialGroup()
+                                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cajaTxt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(EspMetricosLayout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cajaTxt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(EspMetricosLayout.createSequentialGroup()
+                                    .addGap(22, 22, 22)
+                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cajaTxt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(EspMetricosLayout.createSequentialGroup()
+                            .addGap(49, 49, 49)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Respuesta_Esp, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EspMetricosLayout.createSequentialGroup()
-                                        .addGap(11, 11, 11)
-                                        .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addGap(40, 40, 40)
-                                        .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(49, 49, 49)))
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Respuesta_Esp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(25, 25, 25))
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(104, 104, 104)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cajaTxt_y2))
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cajaTxt_y1)))
-                                .addGap(17, 17, 17)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(1, 1, 1))
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addGap(1, 1, 1)
-                                        .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(179, 179, 179)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cajaTxt_x2, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addGap(138, 138, 138)))
-                .addGap(100, 100, 100))
+                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 63, Short.MAX_VALUE))
         );
         EspMetricosLayout.setVerticalGroup(
             EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EspMetricosLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(51, 51, 51)
-                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cajaTxt_x1)
-                                        .addComponent(cajaTxt_y1))
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addGap(34, 34, 34)
-                                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                                        .addGap(5, 5, 5)
-                                        .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cajaTxt_x2)
-                                        .addComponent(cajaTxt_y2)))))
-                        .addGap(53, 53, 53)
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(75, 75, 75)
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Respuesta_Esp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(EspMetricosLayout.createSequentialGroup()
-                        .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(48, 48, 48))
-                            .addGroup(EspMetricosLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(203, 203, 203)))
-                .addGap(151, 151, 151))
+                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaTxt_x1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaTxt_y2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+                    .addComponent(cajaTxt_x2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cajaTxt_y1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CalcularEsMetricos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPDF_EM, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Limpiar_Espacios, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(EspMetricosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(Respuesta_Esp, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                .addGap(202, 202, 202))
         );
+
+        jLabel42.getAccessibleContext().setAccessibleName("");
+        Respuesta_Esp.getAccessibleContext().setAccessibleName("");
 
         Unidad1.addTab("ESPACIOS METRICOS", EspMetricos);
 
@@ -1159,11 +1175,11 @@ public class Main extends javax.swing.JFrame {
         SerieTylor.setLayout(SerieTylorLayout);
         SerieTylorLayout.setHorizontalGroup(
             SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGap(0, 784, Short.MAX_VALUE)
         );
         SerieTylorLayout.setVerticalGroup(
             SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 563, Short.MAX_VALUE)
+            .addGap(0, 699, Short.MAX_VALUE)
         );
 
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
@@ -1491,6 +1507,26 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonPDFConverActionPerformed
 
+    private void btPDF_PEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPDF_PEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPDF_PEActionPerformed
+
+    private void btPDF_BolzanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPDF_BolzanoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPDF_BolzanoActionPerformed
+
+    private void btPDF_BiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPDF_BiseccionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPDF_BiseccionActionPerformed
+
+    private void btPDF_EMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPDF_EMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPDF_EMActionPerformed
+
+    private void cajaTxt_x1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaTxt_x1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cajaTxt_x1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1560,6 +1596,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btLimErr;
     private javax.swing.JButton btLimPuntoFloat;
     private javax.swing.JButton btLimpiarProErro;
+    private javax.swing.JButton btPDF_Biseccion;
+    private javax.swing.JButton btPDF_Bolzano;
+    private javax.swing.JButton btPDF_EM;
+    private javax.swing.JButton btPDF_PE;
     private javax.swing.JButton btPflota;
     private javax.swing.JTextField cajaTxtBInteA;
     private javax.swing.JTextField cajaTxtBInteB;
