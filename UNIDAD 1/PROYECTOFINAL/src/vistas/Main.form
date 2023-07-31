@@ -138,6 +138,215 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
+                <Container class="javax.swing.JPanel" name="Conversiones">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="52" green="a6" red="12" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                      <JTabbedPaneConstraints tabName="CONVERSIONES">
+                        <Property name="tabTitle" type="java.lang.String" value="CONVERSIONES"/>
+                      </JTabbedPaneConstraints>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel44" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                              <Component id="BotonConver" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Component id="LimpiarConver" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel43" alignment="0" pref="228" max="32767" attributes="0"/>
+                                  <Component id="jLabel46" alignment="0" pref="228" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cajaTxt_CW" alignment="0" pref="245" max="32767" attributes="0"/>
+                                  <Component id="labelTxtResConv" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ComboBox_CW" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ComboBox_CT" alignment="0" pref="126" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="BotonPDFConver" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel44" pref="67" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel43" alignment="3" pref="30" max="32767" attributes="0"/>
+                                  <Component id="cajaTxt_CW" alignment="3" pref="30" max="32767" attributes="0"/>
+                                  <Component id="ComboBox_CW" alignment="3" pref="30" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel46" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="labelTxtResConv" alignment="3" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="ComboBox_CT" alignment="0" pref="30" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="LimpiarConver" alignment="3" pref="50" max="32767" attributes="0"/>
+                                  <Component id="BotonConver" alignment="3" pref="50" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="BotonPDFConver" pref="50" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="292" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel43">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="INGRESE EL NUMERO A CONVERTIR:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel44">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="36" style="1"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="CONVERSIONES"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ComboBox_CW">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="4">
+                            <StringItem index="0" value="Decimal"/>
+                            <StringItem index="1" value="Binario"/>
+                            <StringItem index="2" value="Hexadecimal"/>
+                            <StringItem index="3" value="Octal"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboBox_CWActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="cajaTxt_CW">
+                    </Component>
+                    <Component class="javax.swing.JButton" name="BotonConver">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="CONVERTIR"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonConverActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel46">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="EL NUMERO A CONVERTIDO ES :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ComboBox_CT">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="4">
+                            <StringItem index="0" value="Decimal"/>
+                            <StringItem index="1" value="Binario"/>
+                            <StringItem index="2" value="Hexadecimal"/>
+                            <StringItem index="3" value="Octal"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboBox_CTActionPerformed"/>
+                      </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="LimpiarConver">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="LIMPIAR"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LimpiarConverActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelTxtResConv">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="f0" green="df" red="92" type="rgb"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="--"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="BotonPDFConver">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="0" green="0" red="0" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="PDF"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonPDFConverActionPerformed"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
                 <Container class="javax.swing.JPanel" name="PanErrores">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -225,7 +434,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="jLabel3" pref="41" max="32767" attributes="0"/>
+                              <Component id="jLabel3" pref="64" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -245,14 +454,14 @@
                                   <Component id="btErrRe" alignment="3" pref="38" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="btLimErr" pref="38" max="32767" attributes="0"/>
+                              <Component id="btLimErr" pref="61" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="jLabel12" pref="38" max="32767" attributes="0"/>
+                              <Component id="jLabel12" pref="61" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel13" pref="36" max="32767" attributes="0"/>
+                                  <Component id="jLabel13" pref="60" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtResEa" pref="27" max="32767" attributes="0"/>
+                                      <Component id="txtResEa" pref="51" max="32767" attributes="0"/>
                                       <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -481,11 +690,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" pref="45" max="32767" attributes="0"/>
+                              <Component id="jLabel15" pref="74" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel16" alignment="0" pref="30" max="32767" attributes="0"/>
-                                  <Component id="cajaTxtPfijoYflota" alignment="0" pref="30" max="32767" attributes="0"/>
+                                  <Component id="jLabel16" alignment="0" pref="59" max="32767" attributes="0"/>
+                                  <Component id="cajaTxtPfijoYflota" alignment="0" pref="59" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -529,7 +738,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtPfloatBin" pref="28" max="32767" attributes="0"/>
+                                  <Component id="txtPfloatBin" pref="57" max="32767" attributes="0"/>
                                   <Component id="txtResPfloatBin" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -766,7 +975,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                              <Component id="jLabel22" pref="26" max="32767" attributes="0"/>
+                              <Component id="jLabel22" pref="57" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -778,10 +987,10 @@
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel24" max="32767" attributes="0"/>
-                                  <Component id="cajaTxtNumIterPro" pref="25" max="32767" attributes="0"/>
+                                  <Component id="cajaTxtNumIterPro" pref="56" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="250" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="281" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btCalcularProErro" alignment="3" pref="41" max="32767" attributes="0"/>
@@ -981,8 +1190,8 @@
                               </Group>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel34" pref="47" max="32767" attributes="0"/>
-                                  <Component id="FuncionXD" pref="47" max="32767" attributes="0"/>
+                                  <Component id="jLabel34" pref="133" max="32767" attributes="0"/>
+                                  <Component id="FuncionXD" pref="133" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                           </Group>
@@ -1578,324 +1787,10 @@
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="547" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="641" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
-                </Container>
-                <Container class="javax.swing.JPanel" name="PanConver">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="52" green="a6" red="12" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="CONVERSIONES">
-                        <Property name="tabTitle" type="java.lang.String" value="CONVERSIONES"/>
-                      </JTabbedPaneConstraints>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel8" max="32767" attributes="0"/>
-                                          <Component id="jLabel7" max="32767" attributes="0"/>
-                                          <Component id="jLabel9" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="labelTxtOcAdec" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="labelTxtDecAbin" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="labelTxtBinAdec" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="labelTxtHexaAdeci" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="BTcalHexaAdeci" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="BTcalDecAbin" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                                              <Component id="cajaTxtConver" max="32767" attributes="0"/>
-                                              <EmptySpace min="73" pref="73" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="BTcalOcAdeci" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="BTcalBinAdec" max="32767" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="BTlimpiarBinAdec" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="19" pref="19" max="-2" attributes="0"/>
-                                              <Component id="jLabel4" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" max="32767" attributes="0"/>
-                                      <EmptySpace min="155" pref="155" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabel6" pref="25" max="32767" attributes="0"/>
-                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                                      <Component id="cajaTxtConver" pref="36" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabel2" min="-2" pref="40" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="BTcalBinAdec" alignment="3" pref="35" max="32767" attributes="0"/>
-                                  <Component id="BTcalDecAbin" alignment="3" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="BTcalOcAdeci" alignment="3" pref="35" max="32767" attributes="0"/>
-                                  <Component id="BTcalHexaAdeci" alignment="3" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="BTlimpiarBinAdec" pref="30" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" pref="28" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelTxtBinAdec" alignment="0" pref="35" max="32767" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel8" alignment="0" pref="35" max="32767" attributes="0"/>
-                                  <Component id="labelTxtDecAbin" alignment="0" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel9" alignment="0" pref="35" max="32767" attributes="0"/>
-                                  <Component id="labelTxtOcAdec" alignment="0" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel10" alignment="0" pref="35" max="32767" attributes="0"/>
-                                  <Component id="labelTxtHexaAdeci" alignment="0" pref="35" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel2">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="INGRESA EL NUMERO:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JTextField" name="cajaTxtConver">
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel4">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="18" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="RESULTADOS:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="labelTxtBinAdec">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="--"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel6">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="24" style="1"/>
-                        </Property>
-                        <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="CONVERSIONES"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="BTcalBinAdec">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="26" green="26" red="26" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f2" green="f2" red="f2" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="BINARIO A DECIMAL"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTcalBinAdecActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="BTlimpiarBinAdec">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="26" green="26" red="26" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f2" green="f2" red="f2" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="LIMPIAR"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTlimpiarBinAdecActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel7">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="BINARIO A DECIMAL:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="BTcalDecAbin">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="26" green="26" red="26" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f2" green="f2" red="f2" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="DECIMAL A BINARIO"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTcalDecAbinActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel8">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="DECIMAL A BINARIO:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="labelTxtDecAbin">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="--"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="BTcalOcAdeci">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="26" green="26" red="26" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f2" green="f2" red="f2" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="OCTAL A DECIMAL"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTcalOcAdeciActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel9">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="OCTAL A DECIMAL:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="labelTxtOcAdec">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="--"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="BTcalHexaAdeci">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="26" green="26" red="26" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="f2" green="f2" red="f2" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="HEXADECIMAL A DECIMAL"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTcalHexaAdeciActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel10">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="14" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="HEXADECIMAL A DECIMAL:"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="labelTxtHexaAdeci">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="--"/>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
                 </Container>
               </SubComponents>
             </Container>
@@ -1916,7 +1811,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="608" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="702" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>

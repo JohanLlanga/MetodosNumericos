@@ -71,6 +71,17 @@ public class Main extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Unidades = new javax.swing.JTabbedPane();
         Unidad1 = new javax.swing.JTabbedPane();
+        Conversiones = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        ComboBox_CW = new javax.swing.JComboBox<>();
+        cajaTxt_CW = new javax.swing.JTextField();
+        BotonConver = new javax.swing.JButton();
+        jLabel46 = new javax.swing.JLabel();
+        ComboBox_CT = new javax.swing.JComboBox<>();
+        LimpiarConver = new javax.swing.JButton();
+        labelTxtResConv = new javax.swing.JLabel();
+        BotonPDFConver = new javax.swing.JButton();
         PanErrores = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -156,24 +167,6 @@ public class Main extends javax.swing.JFrame {
         jLabel42 = new javax.swing.JLabel();
         Respuesta_Esp = new javax.swing.JLabel();
         SerieTylor = new javax.swing.JPanel();
-        PanConver = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        cajaTxtConver = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        labelTxtBinAdec = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        BTcalBinAdec = new javax.swing.JButton();
-        BTlimpiarBinAdec = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        BTcalDecAbin = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        labelTxtDecAbin = new javax.swing.JLabel();
-        BTcalOcAdeci = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        labelTxtOcAdec = new javax.swing.JLabel();
-        BTcalHexaAdeci = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        labelTxtHexaAdeci = new javax.swing.JLabel();
         Unidad2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -202,6 +195,123 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.setBackground(new java.awt.Color(38, 38, 38));
         Unidad1.setForeground(new java.awt.Color(255, 255, 255));
+
+        Conversiones.setBackground(new java.awt.Color(18, 166, 82));
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel43.setText("INGRESE EL NUMERO A CONVERTIR:");
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("CONVERSIONES");
+
+        ComboBox_CW.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Decimal", "Binario", "Hexadecimal", "Octal" }));
+        ComboBox_CW.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBox_CWActionPerformed(evt);
+            }
+        });
+
+        BotonConver.setBackground(new java.awt.Color(0, 0, 0));
+        BotonConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BotonConver.setForeground(new java.awt.Color(255, 255, 255));
+        BotonConver.setText("CONVERTIR");
+        BotonConver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonConverActionPerformed(evt);
+            }
+        });
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel46.setText("EL NUMERO A CONVERTIDO ES :");
+
+        ComboBox_CT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Decimal", "Binario", "Hexadecimal", "Octal" }));
+        ComboBox_CT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBox_CTActionPerformed(evt);
+            }
+        });
+
+        LimpiarConver.setBackground(new java.awt.Color(0, 0, 0));
+        LimpiarConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        LimpiarConver.setForeground(new java.awt.Color(255, 255, 255));
+        LimpiarConver.setText("LIMPIAR");
+        LimpiarConver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LimpiarConverActionPerformed(evt);
+            }
+        });
+
+        labelTxtResConv.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelTxtResConv.setForeground(new java.awt.Color(146, 223, 240));
+        labelTxtResConv.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelTxtResConv.setText("--");
+
+        BotonPDFConver.setBackground(new java.awt.Color(0, 0, 0));
+        BotonPDFConver.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BotonPDFConver.setForeground(new java.awt.Color(255, 255, 255));
+        BotonPDFConver.setText("PDF");
+        BotonPDFConver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonPDFConverActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ConversionesLayout = new javax.swing.GroupLayout(Conversiones);
+        Conversiones.setLayout(ConversionesLayout);
+        ConversionesLayout.setHorizontalGroup(
+            ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConversionesLayout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
+                .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(95, 95, 95))
+            .addGroup(ConversionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                    .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(65, 65, 65)
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ComboBox_CW, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ComboBox_CT, 0, 126, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ConversionesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BotonPDFConver, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(227, 227, 227))
+        );
+        ConversionesLayout.setVerticalGroup(
+            ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConversionesLayout.createSequentialGroup()
+                .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                .addGap(56, 56, 56)
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(cajaTxt_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(ComboBox_CW, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTxtResConv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(ComboBox_CT, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(ConversionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LimpiarConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(BotonConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(BotonPDFConver, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                .addGap(292, 292, 292))
+        );
+
+        Unidad1.addTab("CONVERSIONES", Conversiones);
 
         PanErrores.setBackground(new java.awt.Color(153, 255, 153));
 
@@ -314,7 +424,7 @@ public class Main extends javax.swing.JFrame {
             PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanErroresLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanErroresLayout.createSequentialGroup()
@@ -330,14 +440,14 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(btErrAbs, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                     .addComponent(btErrRe, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(btLimErr, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                     .addGroup(PanErroresLayout.createSequentialGroup()
-                        .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                        .addComponent(txtResEa, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
                         .addGap(9, 9, 9)))
                 .addGroup(PanErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
@@ -490,11 +600,11 @@ public class Main extends javax.swing.JFrame {
             PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PunFlotanteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
                 .addGap(32, 32, 32)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
+                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(cajaTxtPfijoYflota, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
                 .addGap(58, 58, 58)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btPflota, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
@@ -528,7 +638,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLabel21))
                 .addGap(12, 12, 12)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(txtPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                     .addComponent(txtResPfloatBin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PunFlotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -617,7 +727,7 @@ public class Main extends javax.swing.JFrame {
             PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PropaErroresLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 26, Short.MAX_VALUE)
+                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PropaErroresLayout.createSequentialGroup()
@@ -627,9 +737,9 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+                    .addComponent(cajaTxtNumIterPro, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
                 .addGroup(PropaErroresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCalcularProErro, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
@@ -761,8 +871,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(LimpiarMBolza, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addGap(51, 51, 51)
                 .addGroup(BolzanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
-                    .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                    .addComponent(FuncionXD, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
         );
 
@@ -1061,193 +1171,10 @@ public class Main extends javax.swing.JFrame {
         );
         SerieTylorLayout.setVerticalGroup(
             SerieTylorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 547, Short.MAX_VALUE)
+            .addGap(0, 641, Short.MAX_VALUE)
         );
 
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
-
-        PanConver.setBackground(new java.awt.Color(18, 166, 82));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("INGRESA EL NUMERO:");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setText("RESULTADOS:");
-
-        labelTxtBinAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtBinAdec.setText("--");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("CONVERSIONES");
-
-        BTcalBinAdec.setBackground(new java.awt.Color(38, 38, 38));
-        BTcalBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalBinAdec.setForeground(new java.awt.Color(242, 242, 242));
-        BTcalBinAdec.setText("BINARIO A DECIMAL");
-        BTcalBinAdec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalBinAdecActionPerformed(evt);
-            }
-        });
-
-        BTlimpiarBinAdec.setBackground(new java.awt.Color(38, 38, 38));
-        BTlimpiarBinAdec.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTlimpiarBinAdec.setForeground(new java.awt.Color(242, 242, 242));
-        BTlimpiarBinAdec.setText("LIMPIAR");
-        BTlimpiarBinAdec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTlimpiarBinAdecActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("BINARIO A DECIMAL:");
-
-        BTcalDecAbin.setBackground(new java.awt.Color(38, 38, 38));
-        BTcalDecAbin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalDecAbin.setForeground(new java.awt.Color(242, 242, 242));
-        BTcalDecAbin.setText("DECIMAL A BINARIO");
-        BTcalDecAbin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalDecAbinActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("DECIMAL A BINARIO:");
-
-        labelTxtDecAbin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtDecAbin.setText("--");
-
-        BTcalOcAdeci.setBackground(new java.awt.Color(38, 38, 38));
-        BTcalOcAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalOcAdeci.setForeground(new java.awt.Color(242, 242, 242));
-        BTcalOcAdeci.setText("OCTAL A DECIMAL");
-        BTcalOcAdeci.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalOcAdeciActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel9.setText("OCTAL A DECIMAL:");
-
-        labelTxtOcAdec.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtOcAdec.setText("--");
-
-        BTcalHexaAdeci.setBackground(new java.awt.Color(38, 38, 38));
-        BTcalHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BTcalHexaAdeci.setForeground(new java.awt.Color(242, 242, 242));
-        BTcalHexaAdeci.setText("HEXADECIMAL A DECIMAL");
-        BTcalHexaAdeci.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTcalHexaAdeciActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("HEXADECIMAL A DECIMAL:");
-
-        labelTxtHexaAdeci.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        labelTxtHexaAdeci.setText("--");
-
-        javax.swing.GroupLayout PanConverLayout = new javax.swing.GroupLayout(PanConver);
-        PanConver.setLayout(PanConverLayout);
-        PanConverLayout.setHorizontalGroup(
-            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanConverLayout.createSequentialGroup()
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(184, 184, 184))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(145, 145, 145)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(cajaTxtConver)
-                                .addGap(73, 73, 73))))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(299, 299, 299))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(PanConverLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(184, 184, 184))
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(155, 155, 155)))
-                .addGap(128, 128, 128))
-        );
-        PanConverLayout.setVerticalGroup(
-            PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanConverLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanConverLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(cajaTxtConver, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTcalBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(BTcalDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(28, 28, 28)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTcalOcAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(BTcalHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(43, 43, 43)
-                .addComponent(BTlimpiarBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                .addGap(7, 7, 7)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelTxtBinAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(7, 7, 7)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(labelTxtDecAbin, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(7, 7, 7)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(labelTxtOcAdec, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(7, 7, 7)
-                .addGroup(PanConverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                    .addComponent(labelTxtHexaAdeci, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(32, 32, 32))
-        );
-
-        Unidad1.addTab("CONVERSIONES", PanConver);
 
         Unidades.addTab("UNIDAD 1", Unidad1);
 
@@ -1259,7 +1186,7 @@ public class Main extends javax.swing.JFrame {
         );
         Unidad2Layout.setVerticalGroup(
             Unidad2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+            .addGap(0, 702, Short.MAX_VALUE)
         );
 
         Unidades.addTab("UNIIDAD 2", Unidad2);
@@ -1307,51 +1234,6 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BTcalBinAdecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTcalBinAdecActionPerformed
-        // TODO add your handling code here:
-        String BinAdeci = cajaTxtConver.getText();
-        Conver.BinarioAdecimal(BinAdeci);
-
-        labelTxtBinAdec.setText(String.valueOf(Conver.BinarioAdecimal(BinAdeci)));
-    }//GEN-LAST:event_BTcalBinAdecActionPerformed
-
-    private void BTlimpiarBinAdecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTlimpiarBinAdecActionPerformed
-        // TODO add your handling code here:
-        LimpiarConver();
-    }//GEN-LAST:event_BTlimpiarBinAdecActionPerformed
-
-    private void BTcalDecAbinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTcalDecAbinActionPerformed
-        // TODO add your handling code here:
-        double deciAbin = 0;
-        deciAbin = Double.parseDouble(cajaTxtConver.getText());
-        int PartEntera = (int) deciAbin;
-        double PartFrac = deciAbin - PartEntera;
-
-        String PartEnteraBinaria = Integer.toBinaryString(PartEntera);
-        String PartFactBinaria = Conver.DecimalAbinario(PartFrac);
-
-        String NumeroBinario = PartEnteraBinaria + "." + PartFactBinaria;
-
-        labelTxtDecAbin.setText(String.valueOf(NumeroBinario));
-    }//GEN-LAST:event_BTcalDecAbinActionPerformed
-
-    private void BTcalOcAdeciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTcalOcAdeciActionPerformed
-        // TODO add your handling code here:
-        String octalAdeci = cajaTxtConver.getText();
-        Conver.OctalAdecimal(octalAdeci);
-
-        labelTxtOcAdec.setText(String.valueOf(Conver.OctalAdecimal(octalAdeci)));
-    }//GEN-LAST:event_BTcalOcAdeciActionPerformed
-
-    private void BTcalHexaAdeciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTcalHexaAdeciActionPerformed
-        // TODO add your handling code here:
-        String HexaAdeci = cajaTxtConver.getText();
-
-        int decimal = Integer.parseInt(HexaAdeci, 16);
-
-        labelTxtHexaAdeci.setText(String.valueOf(decimal));
-    }//GEN-LAST:event_BTcalHexaAdeciActionPerformed
 
     private void btErrReActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btErrReActionPerformed
         // TODO add your handling code here:
@@ -1564,6 +1446,75 @@ public class Main extends javax.swing.JFrame {
         }       
     }//GEN-LAST:event_GenPDFPuntoFyFActionPerformed
 
+    private void ComboBox_CWActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBox_CWActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBox_CWActionPerformed
+
+    private void BotonConverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonConverActionPerformed
+        // TODO add your handling code here:
+        String d ="decimal", b ="binario", h ="hexadecimal", o ="octal";
+        String tipo1=(String)ComboBox_CW.getSelectedItem();
+        String tipo2=(String)ComboBox_CT.getSelectedItem();
+        String numero1 = cajaTxt_CW.getText();
+
+        if ( tipo1.equalsIgnoreCase(d)) {
+            int number = Integer.parseInt(numero1);
+            if ( tipo2.equalsIgnoreCase(b)) {
+                labelTxtResConv.setText(String.valueOf(Conver.decimalToBinary(number)));
+            } else if (tipo2.equalsIgnoreCase(h)) {
+                labelTxtResConv.setText(String.valueOf(Conver.decimalToHexadecimal(number)));
+            } else if (tipo2.equalsIgnoreCase(o)) {
+                labelTxtResConv.setText(String.valueOf(Conver.decimalToOctal(number)));
+            } else if (tipo2.equalsIgnoreCase(d)) {
+                labelTxtResConv.setText(numero1);
+            }
+        } else if (tipo1.equalsIgnoreCase(b)){
+            if ( tipo2.equalsIgnoreCase(d)) {
+                labelTxtResConv.setText(String.valueOf(Conver.binaryToDecimal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(h)) {
+                labelTxtResConv.setText(String.valueOf(Conver.binaryToHexadecimal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(o)) {
+                labelTxtResConv.setText(String.valueOf(Conver.binaryToOctal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(b)) {
+                labelTxtResConv.setText(numero1);
+            }
+        } else if (tipo1.equalsIgnoreCase(h)){
+            if ( tipo2.equalsIgnoreCase(d)) {
+                labelTxtResConv.setText(String.valueOf(Conver.hexadecimalToDecimal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(b)) {
+                labelTxtResConv.setText(String.valueOf(Conver.hexadecimalToBinary(numero1)));
+            } else if (tipo2.equalsIgnoreCase(o)) {
+                labelTxtResConv.setText(String.valueOf(Conver.hexadecimalToOctal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(h)){
+                labelTxtResConv.setText(numero1);
+            }
+        } else if (tipo1.equalsIgnoreCase(o)){
+            if ( tipo2.equalsIgnoreCase(d)) {
+                labelTxtResConv.setText(String.valueOf(Conver.octalToDecimal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(h)) {
+                labelTxtResConv.setText(String.valueOf(Conver.octalToHexadecimal(numero1)));
+            } else if (tipo2.equalsIgnoreCase(b)) {
+                labelTxtResConv.setText(String.valueOf(Conver.octalToBinary(numero1)));
+            } else if (tipo2.equalsIgnoreCase(o)){
+                labelTxtResConv.setText(numero1);
+            }
+        }
+
+    }//GEN-LAST:event_BotonConverActionPerformed
+
+    private void ComboBox_CTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBox_CTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBox_CTActionPerformed
+
+    private void LimpiarConverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarConverActionPerformed
+        // TODO add your handling code here:
+        LimpiarConver();
+    }//GEN-LAST:event_LimpiarConverActionPerformed
+
+    private void BotonPDFConverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPDFConverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonPDFConverActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1600,23 +1551,23 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BTcalBinAdec;
-    private javax.swing.JButton BTcalDecAbin;
-    private javax.swing.JButton BTcalHexaAdeci;
-    private javax.swing.JButton BTcalOcAdeci;
-    private javax.swing.JButton BTlimpiarBinAdec;
     private javax.swing.JPanel Biseccion;
     private javax.swing.JPanel Bolzano;
+    private javax.swing.JButton BotonConver;
+    private javax.swing.JButton BotonPDFConver;
     private javax.swing.JButton CalcularEsMetricos;
+    private javax.swing.JComboBox<String> ComboBox_CT;
+    private javax.swing.JComboBox<String> ComboBox_CW;
+    private javax.swing.JPanel Conversiones;
     private javax.swing.JPanel EspMetricos;
     private javax.swing.JLabel FuncionXD;
     private javax.swing.JButton GenPDFPuntoFyF;
+    private javax.swing.JButton LimpiarConver;
     private javax.swing.JButton LimpiarMBolza;
     private javax.swing.JButton Limpiar_Espacios;
     private javax.swing.JButton Limpiar_MBisec;
     private javax.swing.JButton M_Biseccion;
     private javax.swing.JButton M_Bolzano;
-    private javax.swing.JPanel PanConver;
     private javax.swing.JPanel PanErrores;
     private javax.swing.JPanel PropaErrores;
     private javax.swing.JPanel PunFlotante;
@@ -1635,7 +1586,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btPflota;
     private javax.swing.JTextField cajaTxtBInteA;
     private javax.swing.JTextField cajaTxtBInteB;
-    private javax.swing.JTextField cajaTxtConver;
     private javax.swing.JTextField cajaTxtErrN1;
     private javax.swing.JTextField cajaTxtErrN2;
     private javax.swing.JTextField cajaTxtFB;
@@ -1645,12 +1595,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxtNumIterPro;
     private javax.swing.JTextField cajaTxtPfijoYflota;
     private javax.swing.JTextField cajaTxtValorProX;
+    private javax.swing.JTextField cajaTxt_CW;
     private javax.swing.JTextField cajaTxt_x1;
     private javax.swing.JTextField cajaTxt_x2;
     private javax.swing.JTextField cajaTxt_y1;
     private javax.swing.JTextField cajaTxt_y2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1660,7 +1610,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1682,22 +1631,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel labelTxtBinAdec;
-    private javax.swing.JLabel labelTxtDecAbin;
-    private javax.swing.JLabel labelTxtHexaAdeci;
-    private javax.swing.JLabel labelTxtOcAdec;
+    private javax.swing.JLabel labelTxtResConv;
     private javax.swing.JTable tableProErro;
     private javax.swing.JLabel txtPfloatBin;
     private javax.swing.JLabel txtPfloatHexa;
@@ -1712,12 +1656,8 @@ public class Main extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void LimpiarConver() {
-        cajaTxtConver.setText("");
-        labelTxtBinAdec.setText("--");
-        labelTxtDecAbin.setText("--");
-        labelTxtOcAdec.setText("--");
-        labelTxtHexaAdeci.setText("--");
-
+        cajaTxt_CW.setText("");
+        labelTxtResConv.setText("--");
     }
 
     private void LimpiarErr() {
