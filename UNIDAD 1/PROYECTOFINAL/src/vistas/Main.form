@@ -177,7 +177,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jLabel44" pref="88" max="32767" attributes="0"/>
+                              <Component id="jLabel44" pref="104" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel43" alignment="3" pref="30" max="32767" attributes="0"/>
@@ -186,7 +186,7 @@
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ComboBox_CT" pref="78" max="32767" attributes="0"/>
+                                  <Component id="ComboBox_CT" pref="46" max="32767" attributes="0"/>
                                   <Component id="jLabel46" alignment="0" max="32767" attributes="0"/>
                                   <Component id="labelTxtResConv" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -196,8 +196,8 @@
                                   <Component id="BotonConver" alignment="3" pref="50" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="BotonPDFConver" pref="94" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
+                              <Component id="BotonPDFConver" min="-2" pref="50" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="261" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
