@@ -754,6 +754,7 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.addTab("ESPACIOS METRICOS", EspMetricos);
 
+        SerieTylor.setBackground(new java.awt.Color(18, 166, 82));
         SerieTylor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
