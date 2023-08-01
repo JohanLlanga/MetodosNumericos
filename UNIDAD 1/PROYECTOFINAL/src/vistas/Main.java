@@ -15,6 +15,7 @@ import metodosnumericos.Biseccion;
 import metodosnumericos.Bolzano;
 import metodosnumericos.Graficador;
 import metodosnumericos.EspMetricos;
+import metodosnumericos.SerieTylor;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -46,6 +47,7 @@ public class Main extends javax.swing.JFrame {
     Graficador Graf = new Graficador();
     EspMetricos Esp = new EspMetricos();
     GenPDF generar = new GenPDF();
+    SerieTylor sTylor = new SerieTylor();
 
     public Main() {
         initComponents();
@@ -170,6 +172,18 @@ public class Main extends javax.swing.JFrame {
         Limpiar_Espacios = new javax.swing.JButton();
         btPDF_EM = new javax.swing.JButton();
         SerieTylor = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtNTST = new javax.swing.JTextField();
+        txtFuncionST = new javax.swing.JTextField();
+        txtXST = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        RespuestaST = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         Unidad2 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -756,6 +770,57 @@ public class Main extends javax.swing.JFrame {
 
         SerieTylor.setBackground(new java.awt.Color(18, 166, 82));
         SerieTylor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Ingresa la función:");
+        SerieTylor.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Ingresa el valor de x para calcular la serie de Taylor:");
+        SerieTylor.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Ingresa el número de términos de la serie de Taylor: ");
+        SerieTylor.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        SerieTylor.add(txtNTST, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 120, -1));
+        SerieTylor.add(txtFuncionST, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 120, -1));
+        SerieTylor.add(txtXST, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 120, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("Resultado de la serie de Taylor:");
+        SerieTylor.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 220, 30));
+
+        RespuestaST.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        RespuestaST.setText("--");
+        SerieTylor.add(RespuestaST, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 120, 30));
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("CALCULAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        SerieTylor.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 150, 50));
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("PDF");
+        SerieTylor.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 150, 50));
+
+        jButton3.setBackground(new java.awt.Color(0, 0, 0));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("LIMPIAR");
+        SerieTylor.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 150, 50));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel8.setText("SERIE DE TYLOR");
+        SerieTylor.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
+
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
         Unidades.addTab("UNIDAD 1", Unidad1);
@@ -1081,6 +1146,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaTxt_x1ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String functionStr = txtFuncionST.getText();
+        double valX = Double.parseDouble(txtXST.getText());
+        int numInte = Integer.parseInt(txtNTST.getText());
+        
+        sTylor.evaluateFunction(functionStr,valX);
+        sTylor.factorial(numInte);
+        RespuestaST.setText(String.valueOf(sTylor.calculateCustomTaylorSeries(functionStr,valX,numInte)));
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1138,6 +1214,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel PropaErrores;
     private javax.swing.JPanel PunFlotante;
     private javax.swing.JLabel RespuestaMB;
+    private javax.swing.JLabel RespuestaST;
     private javax.swing.JLabel Respuesta_Esp;
     private javax.swing.JPanel SerieTylor;
     private javax.swing.JLabel TituloPrincipal;
@@ -1171,6 +1248,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField cajaTxt_x2;
     private javax.swing.JTextField cajaTxt_y1;
     private javax.swing.JTextField cajaTxt_y2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1180,6 +1261,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1201,6 +1283,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -1208,10 +1291,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelTxtResConv;
     private javax.swing.JTable tableProErro;
+    private javax.swing.JTextField txtFuncionST;
+    private javax.swing.JTextField txtNTST;
     private javax.swing.JLabel txtPfloatBin;
     private javax.swing.JLabel txtPfloatHexa;
     private javax.swing.JLabel txtResEa;
@@ -1222,6 +1309,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel txtResPfloatHexa;
     private javax.swing.JLabel txtResSigno;
     private javax.swing.JLabel txtResValDeci;
+    private javax.swing.JTextField txtXST;
     // End of variables declaration//GEN-END:variables
 
     private void LimpiarConver() {
