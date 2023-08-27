@@ -184,6 +184,7 @@ public class Main extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        RungeKutta = new javax.swing.JPanel();
         Unidad2 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -823,6 +824,21 @@ public class Main extends javax.swing.JFrame {
 
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
+        RungeKutta.setBackground(new java.awt.Color(18, 166, 82));
+
+        javax.swing.GroupLayout RungeKuttaLayout = new javax.swing.GroupLayout(RungeKutta);
+        RungeKutta.setLayout(RungeKuttaLayout);
+        RungeKuttaLayout.setHorizontalGroup(
+            RungeKuttaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 784, Short.MAX_VALUE)
+        );
+        RungeKuttaLayout.setVerticalGroup(
+            RungeKuttaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 674, Short.MAX_VALUE)
+        );
+
+        Unidad1.addTab("RUNGE KUTTA", RungeKutta);
+
         Unidades.addTab("UNIDAD 1", Unidad1);
         Unidades.addTab("UNIDAD 2", Unidad2);
 
@@ -1216,6 +1232,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel RespuestaMB;
     private javax.swing.JLabel RespuestaST;
     private javax.swing.JLabel Respuesta_Esp;
+    private javax.swing.JPanel RungeKutta;
     private javax.swing.JPanel SerieTylor;
     private javax.swing.JLabel TituloPrincipal;
     private javax.swing.JTabbedPane Unidad1;
