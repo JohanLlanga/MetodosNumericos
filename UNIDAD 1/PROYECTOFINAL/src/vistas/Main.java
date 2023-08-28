@@ -185,6 +185,24 @@ public class Main extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         RungeKutta = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        txtFuncionST5 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableRungeKutta = new javax.swing.JTable();
+        btPDF_RK4 = new javax.swing.JButton();
+        btLimpiar_RK4 = new javax.swing.JButton();
+        btCalcular_RK4 = new javax.swing.JButton();
+        txtFuncionST6 = new javax.swing.JTextField();
+        txtFuncionST7 = new javax.swing.JTextField();
+        txtFuncionST8 = new javax.swing.JTextField();
+        txtFuncionST9 = new javax.swing.JTextField();
         Unidad2 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -195,7 +213,7 @@ public class Main extends javax.swing.JFrame {
         TituloPrincipal.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         TituloPrincipal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TituloPrincipal.setText("METODOS NÚMERICOS");
-        jPanel1.add(TituloPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 0, 444, 62));
+        jPanel1.add(TituloPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 444, 62));
 
         Unidades.setBackground(new java.awt.Color(38, 38, 38));
         Unidades.setForeground(new java.awt.Color(255, 255, 255));
@@ -825,17 +843,109 @@ public class Main extends javax.swing.JFrame {
         Unidad1.addTab("SERIE DE TYLOR", SerieTylor);
 
         RungeKutta.setBackground(new java.awt.Color(18, 166, 82));
+        RungeKutta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout RungeKuttaLayout = new javax.swing.GroupLayout(RungeKutta);
-        RungeKutta.setLayout(RungeKuttaLayout);
-        RungeKuttaLayout.setHorizontalGroup(
-            RungeKuttaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 784, Short.MAX_VALUE)
-        );
-        RungeKuttaLayout.setVerticalGroup(
-            RungeKuttaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 674, Short.MAX_VALUE)
-        );
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel9.setText("METODO DE RUNGE-KUTTA");
+        RungeKutta.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Ingrese el valor inicial de x:");
+        RungeKutta.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 220, 30));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel10.setText("Ingrese el valor inicial de y:");
+        RungeKutta.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 220, 30));
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel45.setText("Ingrese el tamaño del paso (h):");
+        RungeKutta.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 220, 30));
+
+        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel47.setText("Ingrese el valor de x en el que desea encontrar y:");
+        RungeKutta.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 340, 30));
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel48.setText("Ingrese la función:");
+        RungeKutta.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 220, 30));
+        RungeKutta.add(txtFuncionST5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 120, 25));
+
+        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel49.setText("Las iteraciones realizadas para llegar a la respuesta:");
+        RungeKutta.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 360, 30));
+
+        jLabel50.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("CUARTO ORDEN RK4");
+        RungeKutta.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+
+        tableRungeKutta.setBackground(new java.awt.Color(38, 38, 38));
+        tableRungeKutta.setForeground(new java.awt.Color(255, 255, 255));
+        tableRungeKutta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "k", "x(k)", "y(k)", "K1", "K2", "K3", "K4"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tableRungeKutta);
+
+        RungeKutta.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 700, 229));
+
+        btPDF_RK4.setBackground(new java.awt.Color(38, 38, 38));
+        btPDF_RK4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btPDF_RK4.setForeground(new java.awt.Color(255, 255, 255));
+        btPDF_RK4.setText("PDF");
+        btPDF_RK4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPDF_RK4ActionPerformed(evt);
+            }
+        });
+        RungeKutta.add(btPDF_RK4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 590, 171, 41));
+
+        btLimpiar_RK4.setBackground(new java.awt.Color(38, 38, 38));
+        btLimpiar_RK4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btLimpiar_RK4.setForeground(new java.awt.Color(255, 255, 255));
+        btLimpiar_RK4.setText("LIMPIAR");
+        btLimpiar_RK4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btLimpiar_RK4ActionPerformed(evt);
+            }
+        });
+        RungeKutta.add(btLimpiar_RK4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 590, 171, 41));
+
+        btCalcular_RK4.setBackground(new java.awt.Color(38, 38, 38));
+        btCalcular_RK4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btCalcular_RK4.setForeground(new java.awt.Color(255, 255, 255));
+        btCalcular_RK4.setText("CALCULAR");
+        btCalcular_RK4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCalcular_RK4ActionPerformed(evt);
+            }
+        });
+        RungeKutta.add(btCalcular_RK4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 590, 171, 41));
+        RungeKutta.add(txtFuncionST6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 120, 25));
+        RungeKutta.add(txtFuncionST7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 120, 25));
+        RungeKutta.add(txtFuncionST8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 120, 25));
+        RungeKutta.add(txtFuncionST9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 120, 25));
 
         Unidad1.addTab("RUNGE KUTTA", RungeKutta);
 
@@ -1173,6 +1283,18 @@ public class Main extends javax.swing.JFrame {
         RespuestaST.setText(String.valueOf(sTylor.calculateCustomTaylorSeries(functionStr,valX,numInte)));
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btPDF_RK4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPDF_RK4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btPDF_RK4ActionPerformed
+
+    private void btLimpiar_RK4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimpiar_RK4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btLimpiar_RK4ActionPerformed
+
+    private void btCalcular_RK4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCalcular_RK4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btCalcular_RK4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1239,15 +1361,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTabbedPane Unidad2;
     private javax.swing.JTabbedPane Unidades;
     private javax.swing.JButton btCalcularProErro;
+    private javax.swing.JButton btCalcular_RK4;
     private javax.swing.JButton btErrAbs;
     private javax.swing.JButton btErrRe;
     private javax.swing.JButton btLimErr;
     private javax.swing.JButton btLimPuntoFloat;
     private javax.swing.JButton btLimpiarProErro;
+    private javax.swing.JButton btLimpiar_RK4;
     private javax.swing.JButton btPDF_Biseccion;
     private javax.swing.JButton btPDF_Bolzano;
     private javax.swing.JButton btPDF_EM;
     private javax.swing.JButton btPDF_PE;
+    private javax.swing.JButton btPDF_RK4;
     private javax.swing.JButton btPflota;
     private javax.swing.JTextField cajaTxtBInteA;
     private javax.swing.JTextField cajaTxtBInteB;
@@ -1269,6 +1394,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1306,15 +1432,29 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel labelTxtResConv;
     private javax.swing.JTable tableProErro;
+    private javax.swing.JTable tableRungeKutta;
     private javax.swing.JTextField txtFuncionST;
+    private javax.swing.JTextField txtFuncionST5;
+    private javax.swing.JTextField txtFuncionST6;
+    private javax.swing.JTextField txtFuncionST7;
+    private javax.swing.JTextField txtFuncionST8;
+    private javax.swing.JTextField txtFuncionST9;
     private javax.swing.JTextField txtNTST;
     private javax.swing.JLabel txtPfloatBin;
     private javax.swing.JLabel txtPfloatHexa;
