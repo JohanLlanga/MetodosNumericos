@@ -972,8 +972,9 @@ public class Main extends javax.swing.JFrame {
         RungeKutta.add(txtFuncionRK1x, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 120, 25));
         RungeKutta.add(txtFuncionRK, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 120, 25));
 
-        txtFuncionRK_Res.setText("Respuesta:");
-        RungeKutta.add(txtFuncionRK_Res, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 140, 60));
+        txtFuncionRK_Res.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtFuncionRK_Res.setText("-----------");
+        RungeKutta.add(txtFuncionRK_Res, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 140, 60));
 
         jLabel51.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);

@@ -4,10 +4,10 @@
  */
 package metodosnumericos;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+import java.util.Scanner;
+
 
 /**
  *
@@ -15,31 +15,30 @@ import net.objecthunter.exp4j.Expression;
  */
 public class Runge_Kutta {
     
-    List<String> iterations4 = new ArrayList<>();
-    
-    public static double function(double x, double y, Expression exp) {
-        exp.setVariable("x", x);
-        exp.setVariable("y", y);
-        return exp.evaluate();
+    public static double calcularInstancia(Expression funcion, double x, double y) {
+        // Asigna los valores de las variables "x" e "y"
+        funcion.setVariable("x", x);
+        funcion.setVariable("y", y);
+
+        // Calcula la instancia de la función
+        return funcion.evaluate();
     }
-    
-    public static double rungeKutta4(double x0, double y0, double h, double x, Expression exp, List<String> iterations4) {
+    public static double rungeKutta(Expression funcion, double y0, double h, double xFinal) {
+        double x = 0.0;
         double y = y0;
 
-        while (x0 < x) {
-            double k1 = h * function(x0, y, exp);
-            double k2 = h * function(x0 + h / 2, y + k1 / 2, exp);
-            double k3 = h * function(x0 + h / 2, y + k2 / 2, exp);
-            double k4 = h * function(x0 + h, y + k3, exp);
+        while (x < xFinal) {
+            double k1 = h * funcion.setVariable("x", x).setVariable("y", y).evaluate();
+            double k2 = h * funcion.setVariable("x", x + h / 2.0).setVariable("y", y + k1 / 2.0).evaluate();
+            double k3 = h * funcion.setVariable("x", x + h / 2.0).setVariable("y", y + k2 / 2.0).evaluate();
+            double k4 = h * funcion.setVariable("x", x + h).setVariable("y", y + k3).evaluate();
 
-            iterations4.add(String.format(Locale.US, "%.6f\t%.6f\t%.6f\t%.6f\t%.6f\t%.6f",
-                    x0, y, k1, k2, k3, k4));
-
-            y += (k1 + 2 * k2 + 2 * k3 + k4) / 6;
-
-            x0 += h;
+            y = y + (k1 + 2 * k2 + 2 * k3 + k4) / 6.0;
+            x = x + h;
         }
 
         return y;
     }
+
+    
 }
